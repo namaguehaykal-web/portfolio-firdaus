@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FH | Muhammad Firdaus Haykal - Solopreneur / Graphic Designer / Media Event Director</title>
+  <meta name="description" content="Portofolio resmi Muhammad Firdaus Haykal. Solopreneur, Desainer Grafis, dan Media Event Director berbasis di Madiun & Yogyakarta. Desain visual strategis, estetik, dan berkesan.">
+  <meta name="author" content="Muhammad Firdaus Haykal">
+  <meta name="theme-color" content="#07070d">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FH | Muhammad Firdaus Haykal - Creative Media Partner">
+  <meta property="og:description" content="Solopreneur, Graphic Designer, Media Event Director. Desain visual strategis, estetik, dan berkesan.">
+
+  <!-- Favicon SVG Monogram -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%23121024'/><rect x='4' y='4' width='92' height='92' rx='21' fill='none' stroke='%23a855f7' stroke-width='4'/><text x='50' y='64' font-family='sans-serif' font-size='42' font-weight='bold' fill='%23c084fc' text-anchor='middle'>FH</text></svg>">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              purple: '#a855f7',
+              deep: '#7e22ce',
+              neon: '#c084fc',
+              dark: '#07070d',
+              card: '#12121e'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- React 18 & ReactDOM 18 (CDN with fallback) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#07070d] text-slate-100 antialiased selection:bg-purple-600 selection:text-white relative">
+
+  <!-- Ambient background glows & cyber grid -->
+  <div class="bg-ambient">
+    <div class="ambient-blob-1"></div>
+    <div class="ambient-blob-2"></div>
+    <div class="ambient-blob-3"></div>
+  </div>
+  <div class="cyber-grid"></div>
+
+  <!-- Main Root Container -->
+  <div id="root" class="relative z-10 min-h-screen">
+    
+    <!-- ================================================================= -->
+    <!-- 1. NAVBAR (Sticky & Responsive)                                   -->
+    <!-- ================================================================= -->
+    <header id="main-navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#090912]/90 backdrop-blur-xl border-b border-purple-500/20 py-3 shadow-2xl shadow-purple-950/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between">
+          <!-- Logo / Brand -->
+          <a href="#home" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 rounded-xl monogram-badge flex items-center justify-center font-bold text-lg text-purple-300 group-hover:scale-105 transition-transform">
+              FH
+            </div>
+            <div class="flex flex-col">
+              <span class="font-bold text-base tracking-wide text-white group-hover:text-purple-300 transition-colors">
+                FH | Muhammad Firdaus Haykal
+              </span>
+              <span class="text-[11px] text-purple-400 font-mono tracking-widest uppercase">
+                Firdaus Media Partner
+              </span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+            <a href="#home" class="nav-link hover:text-purple-400 transition-colors" data-id="Beranda" data-en="Home">Beranda</a>
+            <a href="#about" class="nav-link hover:text-purple-400 transition-colors" data-id="Tentang" data-en="About">Tentang</a>
+            <a href="#experience" class="nav-link hover:text-purple-400 transition-colors" data-id="Pengalaman" data-en="Experience">Pengalaman</a>
+            <a href="#projects" class="nav-link hover:text-purple-400 transition-colors" data-id="Proyek" data-en="Projects">Proyek</a>
+            <a href="#skills" class="nav-link hover:text-purple-400 transition-colors" data-id="Keahlian" data-en="Skills">Keahlian</a>
+            <a href="#contact" class="nav-link hover:text-purple-400 transition-colors" data-id="Kontak" data-en="Contact">Kontak</a>
+          </nav>
+
+          <!-- Actions & Language Switch -->
+          <div class="hidden sm:flex items-center gap-3">
+            <!-- Language Switch Toggle -->
+            <div class="flex items-center p-1 rounded-full bg-[#131122] border border-purple-500/30 text-xs">
+              <button id="btn-lang-id" class="lang-switch-btn px-3 py-1 rounded-full font-medium transition-all bg-purple-600 text-white shadow-md shadow-purple-600/40">
+                ID
+              </button>
+              <button id="btn-lang-en" class="lang-switch-btn px-3 py-1 rounded-full font-medium transition-all text-slate-400 hover:text-slate-200">
+                EN
+              </button>
+            </div>
+
+            <!-- Consultation CTA -->
+            <a href="#contact" class="btn-neon-primary px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2">
+              <span data-id="Konsultasi Media" data-en="Media Consult">Konsultasi Media</span>
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <!-- Mobile Hamburger Button -->
+          <div class="flex items-center gap-2 md:hidden">
+            <div class="flex items-center p-0.5 rounded-full bg-[#131122] border border-purple-500/30 text-[11px] mr-1">
+              <button id="btn-lang-id-m" class="lang-switch-btn px-2 py-0.5 rounded-full bg-purple-600 text-white">ID</button>
+              <button id="btn-lang-en-m" class="lang-switch-btn px-2 py-0.5 rounded-full text-slate-400">EN</button>
+            </div>
+            <button id="btn-mobile-menu" class="p-2 rounded-lg bg-[#181528] border border-purple-500/30 text-purple-300" aria-label="Toggle menu">
+              <svg id="icon-menu-open" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+              <svg id="icon-menu-close" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-dropdown" class="hidden md:hidden bg-[#0d0c18]/95 backdrop-blur-2xl border-b border-purple-500/20 px-6 py-5 mt-2">
+        <div class="flex flex-col gap-4 text-base font-medium">
+          <a href="#home" class="mobile-nav-link hover:text-purple-400 py-1 border-b border-white/5" data-id="Beranda" data-en="Home">Beranda</a>
+          <a href="#about" class="mobile-nav-link hover:text-purple-400 py-1 border-b border-white/5" data-id="Tentang" data-en="About">Tentang</a>
+          <a href="#experience" class="mobile-nav-link hover:text-purple-400 py-1 border-b border-white/5" data-id="Pengalaman" data-en="Experience">Pengalaman</a>
+          <a href="#projects" class="mobile-nav-link hover:text-purple-400 py-1 border-b border-white/5" data-id="Proyek" data-en="Projects">Proyek</a>
+          <a href="#skills" class="mobile-nav-link hover:text-purple-400 py-1 border-b border-white/5" data-id="Keahlian" data-en="Skills">Keahlian</a>
+          <a href="#contact" class="mobile-nav-link hover:text-purple-400 py-1" data-id="Kontak" data-en="Contact">Kontak</a>
+          <a href="#contact" class="btn-neon-primary py-2.5 rounded-xl text-center font-semibold text-sm mt-2 flex items-center justify-center gap-2">
+            <span data-id="Konsultasi Media" data-en="Media Consult">Konsultasi Media</span>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================================================================= -->
+    <!-- 2. BERANDA (Hero Section)                                         -->
+    <!-- ================================================================= -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Content Column -->
+          <div class="lg:col-span-7 flex flex-col items-start">
+            <!-- Status Badge -->
+            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-purple-950/60 border border-purple-500/30 text-purple-300 text-xs font-medium mb-6">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 status-indicator"></span>
+              <span data-id="Terbuka untuk proyek & kolaborasi" data-en="Available for projects & collaboration">Terbuka untuk proyek & kolaborasi</span>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] mb-4">
+              <span class="text-slate-300 font-light block text-2xl sm:text-3xl mb-1" data-id="Halo, saya" data-en="Hello, I'm">
+                Halo, saya
+              </span>
+              <span class="bg-gradient-to-r from-purple-200 via-purple-400 to-fuchsia-400 bg-clip-text text-transparent">
+                Muhammad Firdaus Haykal
+              </span>
+            </h1>
+
+            <!-- Tagline / Roles -->
+            <div class="flex items-center gap-2 text-purple-300 font-mono text-sm sm:text-base font-semibold mb-6">
+              <svg class="w-4 h-4 text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+              <span>Solopreneur / Graphic Designer / Media Event Director</span>
+            </div>
+
+            <!-- Short Description -->
+            <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mb-8" data-id="Saya membantu brand tampil lebih profesional melalui desain visual yang strategis, estetik, dan berkesan." data-en="I help brands stand out professionally through strategic, aesthetic, and impactful visual design.">
+              Saya membantu brand tampil lebih profesional melalui desain visual yang strategis, estetik, dan berkesan.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-4 mb-12">
+              <a href="#projects" class="btn-neon-primary px-7 py-3.5 rounded-xl font-semibold text-sm flex items-center gap-2.5">
+                <span data-id="Lihat Proyek" data-en="View Projects">Lihat Proyek</span>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a href="#contact" class="btn-neon-secondary px-7 py-3.5 rounded-xl font-semibold text-sm flex items-center gap-2.5">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <span data-id="Hubungi Saya" data-en="Get In Touch">Hubungi Saya</span>
+              </a>
+            </div>
+
+            <!-- Quick Statistics Bar -->
+            <div class="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-purple-500/20">
+              <div class="flex flex-col">
+                <span class="text-2xl sm:text-3xl font-extrabold text-neon-purple font-mono">25+</span>
+                <span class="text-xs font-semibold text-slate-200 mt-1" data-id="Mitra Dipercaya" data-en="Trusted Partners">Mitra Dipercaya</span>
+                <span class="text-[11px] text-slate-400" data-id="UMKM & Lembaga" data-en="SMEs & Brands">UMKM & Lembaga</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-2xl sm:text-3xl font-extrabold text-neon-purple font-mono">400+</span>
+                <span class="text-xs font-semibold text-slate-200 mt-1" data-id="Produksi Kreatif" data-en="Creative Done">Produksi Kreatif</span>
+                <span class="text-[11px] text-slate-400" data-id="Visual & Kampanye" data-en="Visuals & Videos">Visual & Kampanye</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-2xl sm:text-3xl font-extrabold text-neon-purple font-mono">3+</span>
+                <span class="text-xs font-semibold text-slate-200 mt-1" data-id="Tahun Pengalaman" data-en="Years Experience">Tahun Pengalaman</span>
+                <span class="text-[11px] text-slate-400" data-id="Sejak 2023 di Media" data-en="Since 2023 in Media">Sejak 2023 di Media</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-2xl sm:text-3xl font-extrabold text-neon-purple font-mono">15+</span>
+                <span class="text-xs font-semibold text-slate-200 mt-1" data-id="Event Diarahkan" data-en="Events Directed">Event Diarahkan</span>
+                <span class="text-[11px] text-slate-400" data-id="Panggung & Siaran" data-en="Stage & Broadcast">Panggung & Siaran</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Profile Showcase Card -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="w-full max-w-md relative">
+              <div class="relative glass-panel-interactive p-6 sm:p-8 rounded-2xl overflow-hidden border-neon-glow">
+                
+                <!-- Card Header -->
+                <div class="flex items-center justify-between pb-6 border-b border-purple-500/20 mb-6">
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+                    <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+                    <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+                  </div>
+                  <span class="text-[11px] font-mono text-purple-400 bg-purple-950/60 px-2.5 py-1 rounded-full border border-purple-500/30">
+                    agency.firdaus.media
+                  </span>
+                </div>
+
+                <!-- Avatar / Monogram Visual -->
+                <div class="relative mx-auto w-36 h-36 rounded-2xl p-1 bg-gradient-to-tr from-purple-600 via-fuchsia-500 to-indigo-600 glow-purple mb-6 flex items-center justify-center">
+                  <div class="w-full h-full bg-[#110f1e] rounded-xl flex flex-col items-center justify-center p-4 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent"></div>
+                    <span class="font-extrabold text-4xl text-purple-300 font-mono tracking-wider">
+                      FH
+                    </span>
+                    <span class="text-[10px] text-purple-400 tracking-widest font-mono mt-1 uppercase">
+                      Director
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Identity Details -->
+                <div class="text-center mb-6">
+                  <h3 class="text-xl font-bold text-white mb-1">
+                    Muhammad Firdaus Haykal
+                  </h3>
+                  <p class="text-xs text-purple-300 font-mono">
+                    Creative Director & Solopreneur
+                  </p>
+                </div>
+
+                <!-- Location & Status Info -->
+                <div class="space-y-3 bg-[#0d0c18]/80 p-4 rounded-xl border border-purple-500/20 text-xs mb-6">
+                  <div class="flex items-center gap-2.5 text-slate-300">
+                    <svg class="w-4 h-4 text-purple-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Lokasi: <strong class="text-slate-100">Madiun - Yogyakarta, Indonesia</strong></span>
+                  </div>
+                  <div class="flex items-center gap-2.5 text-slate-300">
+                    <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    <span class="text-emerald-300 font-medium">Live: Firdaus Media, Your Creative Media Partner</span>
+                  </div>
+                </div>
+
+                <!-- Quick Tags -->
+                <div class="flex flex-wrap gap-1.5 justify-center mb-6">
+                  <span class="tag-pill">#MediaEventDirector</span>
+                  <span class="tag-pill">#VisualBranding</span>
+                  <span class="tag-pill">#UMKMDigital</span>
+                  <span class="tag-pill">#IslamicEconomics</span>
+                </div>
+
+                <!-- Direct WhatsApp Link -->
+                <a href="https://wa.me/6282230076610?text=Halo%20Haykal,%20saya%20tertarik%20berdiskusi%20mengenai%20proyek%20media%20kreatif!" target="_blank" rel="noopener noreferrer" class="w-full btn-neon-primary py-3 rounded-xl font-semibold text-xs flex items-center justify-center gap-2">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                  <span>WhatsApp: +62 822-3007-6610</span>
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 3. TENTANG SAYA (About Section)                                   -->
+    <!-- ================================================================= -->
+    <section id="about" class="py-24 relative border-t border-purple-500/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs font-mono tracking-widest text-purple-400 uppercase bg-purple-950/60 px-3.5 py-1.5 rounded-full border border-purple-500/30 inline-block mb-3" data-id="TENTANG SAYA" data-en="ABOUT ME">
+            TENTANG SAYA
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-id="Desain Strategis untuk Dampak Nyata" data-en="Strategic Design for Real Impact">
+            Desain Strategis untuk Dampak Nyata
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Narrative Column -->
+          <div class="lg:col-span-7 glass-panel p-8 sm:p-10 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-purple-600/10 rounded-full blur-2xl"></div>
+            
+            <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+              <svg class="w-5 h-5 text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+              <span data-id="Eksplorasi Audio-Visual & Dedikasi Profesional" data-en="Audio-Visual Passion & Professional Drive">Eksplorasi Audio-Visual & Dedikasi Profesional</span>
+            </h3>
+
+            <p class="text-slate-300 text-base leading-relaxed mb-6" data-id="Seorang mahasiswa Ekonomi Islam dan desainer grafis yang berbasis di Indonesia dan memulai karier profesionalnya pada tahun 2023. Memiliki keminatan mendalam terhadap seni audio & visual sejak kecil, serta telah menguasai berbagai keterampilan di bidang media kreatif. Menikmati membuat gebrakan dan inovasi kreatif dalam setiap visual atau proyek yang saya tangani." data-en="An Islamic Economics student and graphic designer based in Indonesia who began his professional career in 2023. Harboring a profound passion for audio & visual arts since childhood, mastering diverse skills in creative media. Enjoys spearheading bold creative breakthroughs and innovations in every visual or project handled.">
+              Seorang mahasiswa Ekonomi Islam dan desainer grafis yang berbasis di Indonesia dan memulai karier profesionalnya pada tahun 2023. Memiliki keminatan mendalam terhadap seni audio & visual sejak kecil, serta telah menguasai berbagai keterampilan di bidang media kreatif. Menikmati membuat gebrakan dan inovasi kreatif dalam setiap visual atau proyek yang saya tangani.
+            </p>
+
+            <div class="p-5 rounded-xl bg-purple-950/40 border-l-4 border-purple-500 text-purple-200 text-sm leading-relaxed italic mb-6" data-id="&quot;Menggabungkan ketajaman analisis ekonomi syariah dengan estetika visual tingkat tinggi untuk menghadirkan karya yang berdampak nyata.&quot;" data-en="&quot;Harmonizing Islamic economic strategic depth with high-end visual aesthetics to deliver creations of lasting impact.&quot;">
+              "Menggabungkan ketajaman analisis ekonomi syariah dengan estetika visual tingkat tinggi untuk menghadirkan karya yang berdampak nyata."
+            </div>
+
+            <!-- Pillars -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+              <div class="p-4 rounded-xl bg-[#110f20] border border-purple-500/20">
+                <span class="text-xs font-mono text-purple-400 uppercase tracking-wider block mb-1" data-id="Disiplin Akademik" data-en="Academic Discipline">Disiplin Akademik</span>
+                <h4 class="font-bold text-white text-sm mb-1" data-id="Ekonomi Syariah" data-en="Islamic Economics">Ekonomi Syariah</h4>
+                <p class="text-xs text-slate-400" data-id="Fondasi etika, tata kelola keuangan strategis, dan kepekaan sosial terhadap ekonomi umat & UMKM." data-en="Ethical foundations, strategic financial governance, and socio-economic awareness for local SMEs.">
+                  Fondasi etika, tata kelola keuangan strategis, dan kepekaan sosial terhadap ekonomi umat & UMKM.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-[#110f20] border border-purple-500/20">
+                <span class="text-xs font-mono text-purple-400 uppercase tracking-wider block mb-1" data-id="Keahlian Artistik" data-en="Artistic Expertise">Keahlian Artistik</span>
+                <h4 class="font-bold text-white text-sm mb-1" data-id="Desain Grafis & Media" data-en="Graphic & Media Direction">Desain Grafis & Media</h4>
+                <p class="text-xs text-slate-400" data-id="Ketajaman visual, komposisi tipografi presisi, dan arahan panggung multimedia skala besar." data-en="High visual acuity, meticulous typography, and grand multi-platform stage media direction.">
+                  Ketajaman visual, komposisi tipografi presisi, dan arahan panggung multimedia skala besar.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 Interests Column -->
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+              <svg class="w-5 h-5 text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+              <span data-id="Fokus & Minat Utama" data-en="Core Interests & Focus">Fokus & Minat Utama</span>
+            </h3>
+
+            <!-- Interest 1: Media Event -->
+            <div class="glass-panel-interactive p-4 sm:p-5 flex items-start gap-4 rounded-xl">
+              <div class="w-10 h-10 rounded-lg bg-purple-900/50 border border-purple-500/30 flex items-center justify-center text-purple-300 flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"/><rect width="14" height="12" x="2" y="6" rx="2" ry="2"/></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm mb-1">Media Event</h4>
+                <p class="text-xs text-slate-300 leading-relaxed" data-id="Arahan kreatif visual panggung, live media broadcasting, dynamic display, dan publikasi event besar." data-en="Creative direction for stage visuals, live broadcasting, dynamic displays, and event media coverage.">
+                  Arahan kreatif visual panggung, live media broadcasting, dynamic display, dan publikasi event besar.
+                </p>
+              </div>
+            </div>
+
+            <!-- Interest 2: UMKM Digital -->
+            <div class="glass-panel-interactive p-4 sm:p-5 flex items-start gap-4 rounded-xl">
+              <div class="w-10 h-10 rounded-lg bg-purple-900/50 border border-purple-500/30 flex items-center justify-center text-purple-300 flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm mb-1" data-id="UMKM Digital" data-en="Digital SME Branding">UMKM Digital</h4>
+                <p class="text-xs text-slate-300 leading-relaxed" data-id="Eskalasi identitas visual, kemasan premium, dan konten promosi untuk menaikkan kelas UMKM lokal." data-en="Scaling visual brand identity, packaging, and promo assets to elevate local businesses.">
+                  Eskalasi identitas visual, kemasan premium, dan konten promosi untuk menaikkan kelas UMKM lokal.
+                </p>
+              </div>
+            </div>
+
+            <!-- Interest 3: UI/UX -->
+            <div class="glass-panel-interactive p-4 sm:p-5 flex items-start gap-4 rounded-xl">
+              <div class="w-10 h-10 rounded-lg bg-purple-900/50 border border-purple-500/30 flex items-center justify-center text-purple-300 flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm mb-1">UI/UX Design</h4>
+                <p class="text-xs text-slate-300 leading-relaxed" data-id="Perancangan antarmuka aplikasi digital yang intuitif, modern, dan berorientasi pada kemudahan pengguna." data-en="Crafting clean, intuitive, and conversion-focused user interfaces for web and mobile applications.">
+                  Perancangan antarmuka aplikasi digital yang intuitif, modern, dan berorientasi pada kemudahan pengguna.
+                </p>
+              </div>
+            </div>
+
+            <!-- Interest 4: Social Media Management -->
+            <div class="glass-panel-interactive p-4 sm:p-5 flex items-start gap-4 rounded-xl">
+              <div class="w-10 h-10 rounded-lg bg-purple-900/50 border border-purple-500/30 flex items-center justify-center text-purple-300 flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm mb-1">Social Media Management</h4>
+                <p class="text-xs text-slate-300 leading-relaxed" data-id="Strategi konten visual komprehensif, desain carousel edukatif, dan kurasi engagement audiens." data-en="Comprehensive visual content strategy, informative carousels, and audience engagement curation.">
+                  Strategi konten visual komprehensif, desain carousel edukatif, dan kurasi engagement audiens.
+                </p>
+              </div>
+            </div>
+
+            <!-- Interest 5: Digital Marketing -->
+            <div class="glass-panel-interactive p-4 sm:p-5 flex items-start gap-4 rounded-xl">
+              <div class="w-10 h-10 rounded-lg bg-purple-900/50 border border-purple-500/30 flex items-center justify-center text-purple-300 flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm mb-1">Digital Marketing</h4>
+                <p class="text-xs text-slate-300 leading-relaxed" data-id="Integrasi visual branding bernilai konversi tinggi yang terhubung dengan kanal pemasaran digital." data-en="High-conversion visual branding integrated with modern digital sales and acquisition channels.">
+                  Integrasi visual branding bernilai konversi tinggi yang terhubung dengan kanal pemasaran digital.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 4. PENGALAMAN & PRESTASI (Experience, Education & Awards)         -->
+    <!-- ================================================================= -->
+    <section id="experience" class="py-24 relative bg-[#090812]/50 border-t border-purple-500/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-xs font-mono tracking-widest text-purple-400 uppercase bg-purple-950/60 px-3.5 py-1.5 rounded-full border border-purple-500/30 inline-block mb-3" data-id="REKAM JEJAK" data-en="TRACK RECORD">
+            REKAM JEJAK
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-id="Pengalaman, Pendidikan & Prestasi" data-en="Experience, Education & Honors">
+            Pengalaman, Pendidikan & Prestasi
+          </h2>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="flex justify-center mb-12">
+          <div class="inline-flex p-1.5 rounded-2xl bg-[#121020] border border-purple-500/30 max-w-full overflow-x-auto">
+            <button id="tab-edu-btn" class="exp-tab-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap flex items-center gap-2 bg-purple-600 text-white shadow-lg shadow-purple-600/40">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              <span data-id="Latar Belakang Pendidikan" data-en="Education Background">Latar Belakang Pendidikan</span>
+            </button>
+
+            <button id="tab-exp-btn" class="exp-tab-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap flex items-center gap-2 text-slate-400 hover:text-slate-200">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <span data-id="Riwayat Pekerjaan & Inisiatif" data-en="Work & Initiatives">Riwayat Pekerjaan & Inisiatif</span>
+            </button>
+
+            <button id="tab-ach-btn" class="exp-tab-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all whitespace-nowrap flex items-center gap-2 text-slate-400 hover:text-slate-200">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+              <span data-id="Prestasi & Penghargaan" data-en="Awards & Recognition">Prestasi & Penghargaan</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab 1: Pendidikan (Active by Default) -->
+        <div id="tab-content-edu" class="max-w-4xl mx-auto space-y-8">
+          
+          <!-- STEI Hamfara -->
+          <div class="glass-panel p-6 sm:p-8 rounded-2xl relative">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-purple-500/20 mb-6">
+              <div>
+                <span class="text-xs font-mono text-purple-400 uppercase tracking-widest">2024 – Sekarang</span>
+                <h3 class="text-xl font-bold text-white mt-1">STEI Hamfara, Yogyakarta</h3>
+                <p class="text-sm text-purple-300 font-medium" data-id="S1 Ekonomi Syariah" data-en="B.Sc Islamic Economics">S1 Ekonomi Syariah</p>
+              </div>
+              <div class="w-12 h-12 rounded-xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400 self-start sm:self-center">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="p-4 rounded-xl bg-[#0f0e1c] border border-purple-500/15">
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="font-bold text-sm text-white" data-id="Kepala Departemen Komunikasi & Informasi" data-en="Head of Communication & Information Dept.">Kepala Departemen Komunikasi & Informasi</span>
+                  <span class="text-[11px] font-mono text-purple-400 bg-purple-950/70 px-2 py-0.5 rounded">BEM Hamfara</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed" data-id="Memimpin divisi media strategis, menyusun publikasi digital kampus, dan menjaga konsistensi identitas merek." data-en="Leading the strategic media division, structuring digital campus publications, and managing brand identity.">
+                  Memimpin divisi media strategis, menyusun publikasi digital kampus, dan menjaga konsistensi identitas merek.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-[#0f0e1c] border border-purple-500/15">
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="font-bold text-sm text-white" data-id="Pemateri Pelatihan Desain Grafis" data-en="Graphic Design Masterclass Speaker">Pemateri Pelatihan Desain Grafis</span>
+                  <span class="text-[11px] font-mono text-purple-400 bg-purple-950/70 px-2 py-0.5 rounded">KSEI Relife</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed" data-id="Membimbing puluhan mahasiswa dalam fundamental desain visual, visual branding, dan teknik software grafis." data-en="Mentored dozens of students in graphic design principles, brand storytelling, and visual production techniques.">
+                  Membimbing puluhan mahasiswa dalam fundamental desain visual, visual branding, dan teknik software grafis.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-[#0f0e1c] border border-purple-500/15">
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="font-bold text-sm text-white" data-id="Ketua Divisi Media" data-en="Head of Media Division">Ketua Divisi Media</span>
+                  <span class="text-[11px] font-mono text-purple-400 bg-purple-950/70 px-2 py-0.5 rounded">B-MELT Hamfara 2025</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed" data-id="Mengarahkan seluruh aset grafis, video teaser, dan siaran langsung untuk event unggulan tahunan kampus." data-en="Directed all visual assets, promotional video teasers, and live event coverage for the major annual summit.">
+                  Mengarahkan seluruh aset grafis, video teaser, dan siaran langsung untuk event unggulan tahunan kampus.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-[#0f0e1c] border border-purple-500/15">
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="font-bold text-sm text-white" data-id="Ketua Divisi Media Kreatif" data-en="Head of Creative Media Division">Ketua Divisi Media Kreatif</span>
+                  <span class="text-[11px] font-mono text-purple-400 bg-purple-950/70 px-2 py-0.5 rounded">GEO Hamfara 2025</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed" data-id="Merancang identitas visual panggung, dokumentasi sinematik, dan kampanye digital multi-platform." data-en="Designed stage visual identity, cinematic documentation, and multi-channel digital campaigns.">
+                  Merancang identitas visual panggung, dokumentasi sinematik, dan kampanye digital multi-platform.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SMKN 2 Madiun -->
+          <div class="glass-panel p-6 sm:p-8 rounded-2xl relative">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-purple-500/20 mb-6">
+              <div>
+                <span class="text-xs font-mono text-purple-400 uppercase tracking-widest">2021 – 2024</span>
+                <h3 class="text-xl font-bold text-white mt-1">SMK Negeri 2 Madiun</h3>
+                <p class="text-sm text-purple-300 font-medium" data-id="Multimedia (Audio-Visual & Desain Komunikasi)" data-en="Multimedia (Audio-Visual & Visual Communication)">Multimedia (Audio-Visual & Desain Komunikasi)</p>
+              </div>
+              <div class="w-12 h-12 rounded-xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400 self-start sm:self-center">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="p-4 rounded-xl bg-[#0f0e1c] border border-purple-500/15">
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="font-bold text-sm text-white" data-id="Koordinator Media" data-en="Media Coordinator">Koordinator Media</span>
+                  <span class="text-[11px] font-mono text-purple-400 bg-purple-950/70 px-2 py-0.5 rounded">OSIS SMKN 2 Madiun</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed" data-id="Mengkoordinir dokumentasi, visual feeds media sosial, dan materi promosi event kesiswaan." data-en="Coordinated school media documentation, social feeds, and promotional marketing for school events.">
+                  Mengkoordinir dokumentasi, visual feeds media sosial, dan materi promosi event kesiswaan.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-[#0f0e1c] border border-purple-500/15">
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="font-bold text-sm text-white" data-id="Ketua Redaksi" data-en="Editor-in-Chief">Ketua Redaksi</span>
+                  <span class="text-[11px] font-mono text-purple-400 bg-purple-950/70 px-2 py-0.5 rounded">Majalah JAC</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed" data-id="Memimpin perancangan tata letak editorial, riset konten majalah berkala, dan penyelarasan visual cetak." data-en="Led editorial layout design, periodic content research, and final print production quality control.">
+                  Memimpin perancangan tata letak editorial, riset konten majalah berkala, dan penyelarasan visual cetak.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-[#0f0e1c] border border-purple-500/15 md:col-span-2">
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="font-bold text-sm text-white" data-id="Magang Desain & Percetakan" data-en="Design & Print Production Intern">Magang Desain & Percetakan</span>
+                  <span class="text-[11px] font-mono text-purple-400 bg-purple-950/70 px-2 py-0.5 rounded">Panglima Digital Printing Madiun</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed" data-id="Mengoperasikan alur kerja prepress, color matching, serta produksi outdoor & indoor large format banner." data-en="Handled prepress workflows, color calibration, and large-format outdoor & indoor digital printing.">
+                  Mengoperasikan alur kerja prepress, color matching, serta produksi outdoor & indoor large format banner.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Tab 2: Riwayat Pekerjaan (Hidden by Default) -->
+        <div id="tab-content-exp" class="max-w-4xl mx-auto space-y-6 hidden">
+          
+          <div class="glass-panel-interactive p-6 sm:p-8 rounded-2xl">
+            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-3">
+              <div>
+                <h3 class="text-lg sm:text-xl font-bold text-white" data-id="Direktur Kreatif" data-en="Creative Director">Direktur Kreatif</h3>
+                <span class="text-sm font-semibold text-purple-300">Vanguard Creative Media</span>
+              </div>
+              <span class="text-xs font-mono text-purple-400 bg-purple-950/70 px-3 py-1 rounded-full border border-purple-500/30 self-start">2024 – Sekarang</span>
+            </div>
+            <p class="text-sm text-slate-300 leading-relaxed mb-4" data-id="Mengarahkan visi artistik, tata kelola proyek multimedia, serta strategi kampanye digital visual untuk berbagai brand rekanan." data-en="Directing artistic vision, multimedia project pipelines, and digital creative campaigns for diverse partner brands.">
+              Mengarahkan visi artistik, tata kelola proyek multimedia, serta strategi kampanye digital visual untuk berbagai brand rekanan.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tag-pill text-[11px]">Creative Direction</span>
+              <span class="tag-pill text-[11px]">Brand Identity</span>
+              <span class="tag-pill text-[11px]">Event Media</span>
+              <span class="tag-pill text-[11px]">Video Production</span>
+            </div>
+          </div>
+
+          <div class="glass-panel-interactive p-6 sm:p-8 rounded-2xl">
+            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-3">
+              <div>
+                <h3 class="text-lg sm:text-xl font-bold text-white" data-id="Desainer Grafis Lepas" data-en="Freelance Graphic Designer">Desainer Grafis Lepas</h3>
+                <span class="text-sm font-semibold text-purple-300">Firdaus Media</span>
+              </div>
+              <span class="text-xs font-mono text-purple-400 bg-purple-950/70 px-3 py-1 rounded-full border border-purple-500/30 self-start">2023 – Sekarang</span>
+            </div>
+            <p class="text-sm text-slate-300 leading-relaxed mb-4" data-id="Menyediakan layanan komprehensif identitas merek, visual branding UMKM, materi promosi, serta konsultasi estetika media." data-en="Providing end-to-end brand identity services, SME marketing assets, promotional graphics, and media consultations.">
+              Menyediakan layanan komprehensif identitas merek, visual branding UMKM, materi promosi, serta konsultasi estetika media.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tag-pill text-[11px]">Freelance</span>
+              <span class="tag-pill text-[11px]">Logo Design</span>
+              <span class="tag-pill text-[11px]">Packaging</span>
+              <span class="tag-pill text-[11px]">Print Media</span>
+            </div>
+          </div>
+
+          <div class="glass-panel-interactive p-6 sm:p-8 rounded-2xl">
+            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-3">
+              <div>
+                <h3 class="text-lg sm:text-xl font-bold text-white" data-id="Admin Media Sosial & Desainer" data-en="Social Media Lead & Visual Designer">Admin Media Sosial & Desainer</h3>
+                <span class="text-sm font-semibold text-purple-300">ZISWAH Hamfara</span>
+              </div>
+              <span class="text-xs font-mono text-purple-400 bg-purple-950/70 px-3 py-1 rounded-full border border-purple-500/30 self-start">2024 – Sekarang</span>
+            </div>
+            <p class="text-sm text-slate-300 leading-relaxed mb-4" data-id="Mengelola penyusunan konten edukasi zakat, infaq, shadaqah, dan wakaf melalui infografis kreatif dan visual persuasif." data-en="Managing Islamic philanthropic content strategy through educational infographics and engaging visual layouts.">
+              Mengelola penyusunan konten edukasi zakat, infaq, shadaqah, dan wakaf melalui infografis kreatif dan visual persuasif.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tag-pill text-[11px]">Content Strategy</span>
+              <span class="tag-pill text-[11px]">Infographics</span>
+              <span class="tag-pill text-[11px]">Social Media</span>
+              <span class="tag-pill text-[11px]">Charity Campaign</span>
+            </div>
+          </div>
+
+          <div class="glass-panel-interactive p-6 sm:p-8 rounded-2xl">
+            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-3">
+              <div>
+                <h3 class="text-lg sm:text-xl font-bold text-white">Co-founder</h3>
+                <span class="text-sm font-semibold text-purple-300">Creativeln.Co Madiun</span>
+              </div>
+              <span class="text-xs font-mono text-purple-400 bg-purple-950/70 px-3 py-1 rounded-full border border-purple-500/30 self-start">2023 – 2024</span>
+            </div>
+            <p class="text-sm text-slate-300 leading-relaxed mb-4" data-id="Menginisiasi agensi kreatif lokal Madiun yang berfokus pada digitalisasi visual UMKM dan pembuatan konten media sosial." data-en="Co-founded a regional creative agency focused on SME visual transformation and dynamic social media content.">
+              Menginisiasi agensi kreatif lokal Madiun yang berfokus pada digitalisasi visual UMKM dan pembuatan konten media sosial.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tag-pill text-[11px]">Agency Growth</span>
+              <span class="tag-pill text-[11px]">Local SME</span>
+              <span class="tag-pill text-[11px]">Creative Agency</span>
+            </div>
+          </div>
+
+          <div class="glass-panel-interactive p-6 sm:p-8 rounded-2xl">
+            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-3">
+              <div>
+                <h3 class="text-lg sm:text-xl font-bold text-white" data-id="Magang Desain Grafis" data-en="Graphic Design Intern">Magang Desain Grafis</h3>
+                <span class="text-sm font-semibold text-purple-300">Creative UX Jakarta</span>
+              </div>
+              <span class="text-xs font-mono text-purple-400 bg-purple-950/70 px-3 py-1 rounded-full border border-purple-500/30 self-start">2023</span>
+            </div>
+            <p class="text-sm text-slate-300 leading-relaxed mb-4" data-id="Terlibat dalam proyek perancangan antarmuka digital, aset visual promosi aplikasi, dan pedoman gaya visual terstandar." data-en="Participated in user interface asset development, digital marketing banners, and standardized visual guidelines.">
+              Terlibat dalam proyek perancangan antarmuka digital, aset visual promosi aplikasi, dan pedoman gaya visual terstandar.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tag-pill text-[11px]">UI Design</span>
+              <span class="tag-pill text-[11px]">Digital Marketing</span>
+              <span class="tag-pill text-[11px]">Figma</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Tab 3: Prestasi (Hidden by Default) -->
+        <div id="tab-content-ach" class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 hidden">
+          
+          <div class="glass-panel-interactive p-6 sm:p-8 rounded-2xl flex flex-col justify-between border-neon-glow">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+                </span>
+                <span class="px-3 py-1 rounded-full bg-gradient-to-r from-amber-500/20 to-purple-500/20 border border-amber-500/40 text-amber-300 text-xs font-bold font-mono">
+                  Champion • 2025
+                </span>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-1" data-id="Juara 1 Desain Poster Ekonomi Syariah Nasional" data-en="1st Place National Islamic Economics Poster Design">
+                Juara 1 Desain Poster Ekonomi Syariah Nasional
+              </h3>
+              <p class="text-xs text-purple-300 font-mono mb-4">UIN Sunan Gunung Djati Bandung</p>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4" data-id="Meraih predikat juara pertama melalui karya visual poster ilmiah yang mengolaborasikan teori ekonomi syariah dengan infografis modern dan estetika tipografi kelas atas." data-en="Secured 1st place award with a scholarly poster harmonizing Islamic economics theory with modern data visualization and typography.">
+                Meraih predikat juara pertama melalui karya visual poster ilmiah yang mengolaborasikan teori ekonomi syariah dengan infografis modern dan estetika tipografi kelas atas.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-purple-500/20 flex items-center gap-2 text-xs text-amber-300 font-medium">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <span data-id="Sertifikasi & Karya Terverifikasi" data-en="Certified & Verified Accolade">Sertifikasi & Karya Terverifikasi</span>
+            </div>
+          </div>
+
+          <div class="glass-panel-interactive p-6 sm:p-8 rounded-2xl flex flex-col justify-between border-neon-glow">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                </span>
+                <span class="px-3 py-1 rounded-full bg-gradient-to-r from-amber-500/20 to-purple-500/20 border border-amber-500/40 text-amber-300 text-xs font-bold font-mono">
+                  Gold Medal • 2023
+                </span>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-1" data-id="Juara 1 LKS Desain Grafis Kota Madiun" data-en="1st Place Municipal LKS Graphic Design Technology">
+                Juara 1 LKS Desain Grafis Kota Madiun
+              </h3>
+              <p class="text-xs text-purple-300 font-mono mb-4">Dinas Pendidikan Kota Madiun</p>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4" data-id="Juara 1 tingkat kota kategori Graphic Design Technology melalui uji kompetensi perancangan branding terintegrasi, layouting presisi, dan teknik prepress tingkat mahir." data-en="Won 1st prize in municipal Graphic Design Technology showcasing corporate branding design, high-precision editorial layout, and advanced prepress execution.">
+                Juara 1 tingkat kota kategori Graphic Design Technology melalui uji kompetensi perancangan branding terintegrasi, layouting presisi, dan teknik prepress tingkat mahir.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-purple-500/20 flex items-center gap-2 text-xs text-amber-300 font-medium">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <span data-id="Sertifikasi & Karya Terverifikasi" data-en="Certified & Verified Accolade">Sertifikasi & Karya Terverifikasi</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 5. PROYEK (Projects Showcase with Flagship Highlight)             -->
+    <!-- ================================================================= -->
+    <section id="projects" class="py-24 relative border-t border-purple-500/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-xs font-mono tracking-widest text-purple-400 uppercase bg-purple-950/60 px-3.5 py-1.5 rounded-full border border-purple-500/30 inline-block mb-3" data-id="PORTOFOLIO TERPILIH" data-en="FEATURED WORKS">
+            PORTOFOLIO TERPILIH
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4" data-id="Karya Visual, Branding & Solusi Digital" data-en="Visuals, Branding & Digital Solutions">
+            Karya Visual, Branding & Solusi Digital
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed" data-id="Menampilkan portofolio visual, branding, dan proyek utama aplikasi manajemen bengkel mobil & otomasi WhatsApp yang dibangun berdasarkan pengalaman lapangan." data-en="Showcasing visual portfolio, corporate branding, and flagship auto repair workshop suite with WhatsApp automation built from field experience.">
+            Menampilkan portofolio visual, branding, dan proyek utama aplikasi manajemen bengkel mobil & otomasi WhatsApp yang dibangun berdasarkan pengalaman lapangan.
+          </p>
+        </div>
+
+        <!-- ------------------------------------------------------------- -->
+        <!-- FLAGSHIP CASE STUDY: Workshop App & WhatsApp Bot             -->
+        <!-- ------------------------------------------------------------- -->
+        <div class="mb-16">
+          <div class="glass-panel p-6 sm:p-10 rounded-3xl border-neon-glow relative overflow-hidden bg-gradient-to-br from-[#131024]/90 to-[#0e0c1a]/95">
+            <div class="absolute top-0 right-0 w-80 h-80 bg-purple-600/15 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              
+              <!-- Left Details -->
+              <div class="lg:col-span-7">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-900/60 border border-purple-400/40 text-purple-300 text-xs font-bold font-mono mb-4">
+                  <svg class="w-3.5 h-3.5 text-yellow-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  <span data-id="PROYEK UTAMA / FLAGSHIP" data-en="FLAGSHIP CASE STUDY">PROYEK UTAMA / FLAGSHIP</span>
+                </div>
+
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-3" data-id="Aplikasi Manajemen Bengkel Mobil & Otomasi WhatsApp" data-en="Auto Repair Workshop Management & WhatsApp Automation">
+                  Aplikasi Manajemen Bengkel Mobil & Otomasi WhatsApp
+                </h3>
+
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6" data-id="Dibangun berdasarkan observasi mendalam dan pengalaman lapangan langsung pada operasional bengkel otomotif. Sistem ini mengatasi problem klasik inefisiensi rekap nota manual, riwayat servis yang hilang, serta penumpukan panggilan tanya kabar mobil. Sistem dilengkapi engine otomasi WhatsApp yang secara otomatis mengirimkan pesan berkala: status penerimaan, foto progres pengerjaan, rincian biaya sparepart sebelum disetujui, nota digital resmi, hingga reminder otomatis ganti oli saat tiba jadwal perawatan." data-en="Engineered from hands-on field experience in automotive workshop operations. Solves critical pain points: manual paper logs, lost maintenance records, and excessive customer status calls. Built with an event-driven WhatsApp messaging engine that sends automated vehicle check-in alerts, work progress photos, itemized part quotations, digital invoices, and predictive maintenance reminders.">
+                  Dibangun berdasarkan observasi mendalam dan pengalaman lapangan langsung pada operasional bengkel otomotif. Sistem ini mengatasi problem klasik inefisiensi rekap nota manual, riwayat servis yang hilang, serta penumpukan panggilan tanya kabar mobil. Sistem dilengkapi engine otomasi WhatsApp yang secara otomatis mengirimkan pesan berkala: status penerimaan, foto progres pengerjaan, rincian biaya sparepart sebelum disetujui, nota digital resmi, hingga reminder otomatis ganti oli saat tiba jadwal perawatan.
+                </p>
+
+                <!-- Highlights List -->
+                <div class="space-y-2.5 mb-6">
+                  <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-200">
+                    <span class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-300 flex items-center justify-center flex-shrink-0">
+                      <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                    </span>
+                    <span data-id="Otomasi WhatsApp Status Servis Real-time" data-en="Real-time WhatsApp Service Status Alerts">Otomasi WhatsApp Status Servis Real-time</span>
+                  </div>
+                  <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-200">
+                    <span class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-300 flex items-center justify-center flex-shrink-0">
+                      <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                    </span>
+                    <span data-id="Database Riwayat Kendaraan & Pelanggan Terpusat" data-en="Centralized Vehicle & Customer History Database">Database Riwayat Kendaraan & Pelanggan Terpusat</span>
+                  </div>
+                  <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-200">
+                    <span class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-300 flex items-center justify-center flex-shrink-0">
+                      <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                    </span>
+                    <span data-id="Kalkulasi Sparepart & Invoice Digital Otomatis" data-en="Automated Digital Invoicing & Spare Parts Breakdown">Kalkulasi Sparepart & Invoice Digital Otomatis</span>
+                  </div>
+                  <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-200">
+                    <span class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-300 flex items-center justify-center flex-shrink-0">
+                      <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                    </span>
+                    <span data-id="Pengingat Ganti Oli Berkala Berbasis Kilometer" data-en="Predictive Periodic Maintenance & Oil Reminder">Pengingat Ganti Oli Berkala Berbasis Kilometer</span>
+                  </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="flex flex-wrap gap-2 mb-8">
+                  <span class="px-3 py-1 rounded-lg bg-[#191530] border border-purple-500/30 text-purple-300 font-mono text-xs">React</span>
+                  <span class="px-3 py-1 rounded-lg bg-[#191530] border border-purple-500/30 text-purple-300 font-mono text-xs">Tailwind CSS</span>
+                  <span class="px-3 py-1 rounded-lg bg-[#191530] border border-purple-500/30 text-purple-300 font-mono text-xs">Node.js</span>
+                  <span class="px-3 py-1 rounded-lg bg-[#191530] border border-purple-500/30 text-purple-300 font-mono text-xs">WhatsApp Gateway</span>
+                  <span class="px-3 py-1 rounded-lg bg-[#191530] border border-purple-500/30 text-purple-300 font-mono text-xs">REST API</span>
+                </div>
+
+                <!-- Buttons -->
+                <div class="flex flex-wrap items-center gap-4">
+                  <button onclick="openProjectModal('auto-workshop-app')" class="btn-neon-primary px-6 py-3 rounded-xl font-semibold text-xs sm:text-sm flex items-center gap-2">
+                    <span data-id="Lihat Detail Studi Kasus" data-en="View Case Study">Lihat Detail Studi Kasus</span>
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  </button>
+                  <a href="#contact" class="btn-neon-secondary px-6 py-3 rounded-xl font-semibold text-xs sm:text-sm flex items-center gap-2">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <span data-id="Konsultasi Solusi Serupa" data-en="Inquire Similar Solution">Konsultasi Solusi Serupa</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right Simulation Preview -->
+              <div class="lg:col-span-5">
+                <div class="p-6 rounded-2xl bg-[#090814] border border-purple-500/30 space-y-4 shadow-xl">
+                  <div class="flex items-center justify-between pb-3 border-b border-purple-500/20">
+                    <div class="flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                      <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                      <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+                      <span class="text-xs font-mono text-purple-300 ml-2">Workshop OS + WA Bot</span>
+                    </div>
+                    <span class="text-[10px] text-emerald-400 bg-emerald-950/70 px-2 py-0.5 rounded border border-emerald-500/30 font-mono">
+                      Active Daemon
+                    </span>
+                  </div>
+
+                  <div class="p-3.5 rounded-xl bg-[#0d1f18] border border-emerald-500/30 space-y-2">
+                    <div class="flex items-center justify-between text-xs font-semibold text-emerald-400">
+                      <span class="flex items-center gap-1.5">
+                        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        <span>WhatsApp Engine Gateway</span>
+                      </span>
+                      <span class="text-[10px] font-mono text-emerald-300">Just Now</span>
+                    </div>
+                    <p class="text-[11px] text-emerald-100 font-mono leading-relaxed bg-[#06120e] p-2.5 rounded-lg border border-emerald-500/20">
+                      "Halo Bpk. Rian, servis berkala Toyota Avanza (AE 1284 FG) telah SELESAI. Total estimasi sparepart & oli: Rp 450.000. Invoice digital: bengkel.link/inv/9482. Terima kasih!"
+                    </p>
+                  </div>
+
+                  <div class="grid grid-cols-2 gap-3 pt-2">
+                    <div class="p-3 rounded-lg bg-[#141226] border border-purple-500/20">
+                      <span class="text-xs text-slate-400 block mb-1">Efisiensi Admin</span>
+                      <span class="text-lg font-bold font-mono text-purple-300">+85% Cepat</span>
+                    </div>
+                    <div class="p-3 rounded-lg bg-[#141226] border border-purple-500/20">
+                      <span class="text-xs text-slate-400 block mb-1">Alert Delivery</span>
+                      <span class="text-lg font-bold font-mono text-emerald-400">99.8% Sukses</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter Category Tabs -->
+        <div class="flex justify-center mb-10 overflow-x-auto pb-2">
+          <div class="inline-flex p-1.5 rounded-2xl bg-[#121020] border border-purple-500/30 gap-1">
+            <button class="project-filter-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-purple-600 text-white shadow-md shadow-purple-600/40" data-filter="all">Semua Proyek</button>
+            <button class="project-filter-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all text-slate-400 hover:text-slate-200" data-filter="webapp">Web App & Otomasi</button>
+            <button class="project-filter-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all text-slate-400 hover:text-slate-200" data-filter="branding">Branding & Media</button>
+            <button class="project-filter-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all text-slate-400 hover:text-slate-200" data-filter="graphic">Desain Grafis</button>
+            <button class="project-filter-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all text-slate-400 hover:text-slate-200" data-filter="event">Media Event</button>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Card 1: Vanguard & Firdaus Branding -->
+          <div class="project-card glass-panel-interactive rounded-2xl overflow-hidden cursor-pointer flex flex-col justify-between group" data-category="branding" onclick="openProjectModal('vanguard-firdaus-branding')">
+            <div>
+              <div class="h-48 w-full bg-gradient-to-tr from-purple-600 to-pink-600 relative p-5 flex flex-col justify-between overflow-hidden">
+                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
+                <div class="relative z-10 flex items-center justify-between">
+                  <span class="text-[11px] font-mono font-bold bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-purple-200 border border-purple-400/30">Brand Identity</span>
+                  <span class="w-8 h-8 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                  </span>
+                </div>
+                <div class="relative z-10">
+                  <span class="text-xs font-mono text-purple-200 tracking-wider uppercase">Branding & Identitas</span>
+                  <h4 class="text-lg font-bold text-white line-clamp-2 drop-shadow">Identitas Visual: Vanguard Creative & Firdaus Media</h4>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4 line-clamp-3">
+                  Perancangan sistem identitas merek lengkap, monogram cyber-neon, brand book, stationery, dan media kit komersial agensi.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  <span class="tag-pill text-[10px]">Illustrator</span>
+                  <span class="tag-pill text-[10px]">Photoshop</span>
+                  <span class="tag-pill text-[10px]">Figma</span>
+                </div>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2 border-t border-purple-500/10 flex items-center justify-between text-xs text-purple-300 font-semibold group-hover:text-purple-200">
+              <span data-id="Lihat Detail Studi Kasus" data-en="View Case Study">Lihat Detail Studi Kasus</span>
+              <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </div>
+          </div>
+
+          <!-- Card 2: ZISWAH Campaign -->
+          <div class="project-card glass-panel-interactive rounded-2xl overflow-hidden cursor-pointer flex flex-col justify-between group" data-category="graphic" onclick="openProjectModal('ziswah-campaign')">
+            <div>
+              <div class="h-48 w-full bg-gradient-to-tr from-indigo-600 to-purple-600 relative p-5 flex flex-col justify-between overflow-hidden">
+                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
+                <div class="relative z-10 flex items-center justify-between">
+                  <span class="text-[11px] font-mono font-bold bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-purple-200 border border-purple-400/30">Social Campaign</span>
+                  <span class="w-8 h-8 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                  </span>
+                </div>
+                <div class="relative z-10">
+                  <span class="text-xs font-mono text-purple-200 tracking-wider uppercase">Desain Grafis & Medsos</span>
+                  <h4 class="text-lg font-bold text-white line-clamp-2 drop-shadow">Kampanye Visual & Infografis Edukasi ZISWAH Hamfara</h4>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4 line-clamp-3">
+                  Rangkaian visual feeds Instagram, carousel edukasi literasi zakat modern, dan poster digital kampanye filantropi Islam.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  <span class="tag-pill text-[10px]">Photoshop</span>
+                  <span class="tag-pill text-[10px]">Infographics</span>
+                  <span class="tag-pill text-[10px]">Content Strategy</span>
+                </div>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2 border-t border-purple-500/10 flex items-center justify-between text-xs text-purple-300 font-semibold group-hover:text-purple-200">
+              <span data-id="Lihat Detail Studi Kasus" data-en="View Case Study">Lihat Detail Studi Kasus</span>
+              <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </div>
+          </div>
+
+          <!-- Card 3: Event Media & JAC Magazine -->
+          <div class="project-card glass-panel-interactive rounded-2xl overflow-hidden cursor-pointer flex flex-col justify-between group" data-category="event" onclick="openProjectModal('jac-magazine-bmelt-geo')">
+            <div>
+              <div class="h-48 w-full bg-gradient-to-tr from-purple-600 to-fuchsia-600 relative p-5 flex flex-col justify-between overflow-hidden">
+                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
+                <div class="relative z-10 flex items-center justify-between">
+                  <span class="text-[11px] font-mono font-bold bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-purple-200 border border-purple-400/30">Media Direction</span>
+                  <span class="w-8 h-8 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                  </span>
+                </div>
+                <div class="relative z-10">
+                  <span class="text-xs font-mono text-purple-200 tracking-wider uppercase">Media Event & Editorial</span>
+                  <h4 class="text-lg font-bold text-white line-clamp-2 drop-shadow">Media Direction B-MELT, GEO Hamfara & Majalah JAC</h4>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4 line-clamp-3">
+                  Pengarahan visual panggung LED, video bumper dinamis, publikasi cetak majalah JAC, dan visual broadcasting konferensi besar.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  <span class="tag-pill text-[10px]">Premiere Pro</span>
+                  <span class="tag-pill text-[10px]">After Effects</span>
+                  <span class="tag-pill text-[10px]">OBS</span>
+                </div>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2 border-t border-purple-500/10 flex items-center justify-between text-xs text-purple-300 font-semibold group-hover:text-purple-200">
+              <span data-id="Lihat Detail Studi Kasus" data-en="View Case Study">Lihat Detail Studi Kasus</span>
+              <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </div>
+          </div>
+
+          <!-- Card 4: UIN Poster Award -->
+          <div class="project-card glass-panel-interactive rounded-2xl overflow-hidden cursor-pointer flex flex-col justify-between group" data-category="graphic" onclick="openProjectModal('uin-poster-award')">
+            <div>
+              <div class="h-48 w-full bg-gradient-to-tr from-amber-500 to-purple-600 relative p-5 flex flex-col justify-between overflow-hidden">
+                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
+                <div class="relative z-10 flex items-center justify-between">
+                  <span class="text-[11px] font-mono font-bold bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-amber-200 border border-amber-400/30">Juara 1 Nasional</span>
+                  <span class="w-8 h-8 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                  </span>
+                </div>
+                <div class="relative z-10">
+                  <span class="text-xs font-mono text-purple-200 tracking-wider uppercase">Desain Grafis & Prestasi</span>
+                  <h4 class="text-lg font-bold text-white line-clamp-2 drop-shadow">Poster Juara 1 Nasional Ekonomi Syariah UIN Bandung</h4>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4 line-clamp-3">
+                  Poster karya pemenang Juara 1 tingkat nasional yang mengintegrasikan teori ekonomi syariah dengan visual storytelling modern.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  <span class="tag-pill text-[10px]">Photoshop</span>
+                  <span class="tag-pill text-[10px]">Illustrator</span>
+                  <span class="tag-pill text-[10px]">Typography</span>
+                </div>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2 border-t border-purple-500/10 flex items-center justify-between text-xs text-purple-300 font-semibold group-hover:text-purple-200">
+              <span data-id="Lihat Detail Studi Kasus" data-en="View Case Study">Lihat Detail Studi Kasus</span>
+              <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </div>
+          </div>
+
+          <!-- Card 5: UMKM Packaging Revamp -->
+          <div class="project-card glass-panel-interactive rounded-2xl overflow-hidden cursor-pointer flex flex-col justify-between group" data-category="branding" onclick="openProjectModal('umkm-packaging-revamp')">
+            <div>
+              <div class="h-48 w-full bg-gradient-to-tr from-purple-500 to-indigo-600 relative p-5 flex flex-col justify-between overflow-hidden">
+                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
+                <div class="relative z-10 flex items-center justify-between">
+                  <span class="text-[11px] font-mono font-bold bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-purple-200 border border-purple-400/30">SME Escalation</span>
+                  <span class="w-8 h-8 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                  </span>
+                </div>
+                <div class="relative z-10">
+                  <span class="text-xs font-mono text-purple-200 tracking-wider uppercase">Branding & Kemasan</span>
+                  <h4 class="text-lg font-bold text-white line-clamp-2 drop-shadow">Revamp Kemasan & Identitas Visual UMKM Digital</h4>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4 line-clamp-3">
+                  Transformasi kemasan produk kuliner dan ritel UMKM Madiun - Yogyakarta untuk bersaing di pasar modern dan marketplace.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  <span class="tag-pill text-[10px]">Prepress</span>
+                  <span class="tag-pill text-[10px]">3D Mockup</span>
+                  <span class="tag-pill text-[10px]">Packaging</span>
+                </div>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2 border-t border-purple-500/10 flex items-center justify-between text-xs text-purple-300 font-semibold group-hover:text-purple-200">
+              <span data-id="Lihat Detail Studi Kasus" data-en="View Case Study">Lihat Detail Studi Kasus</span>
+              <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 6. KEAHLIAN & TOOLKIT (Skills Section)                            -->
+    <!-- ================================================================= -->
+    <section id="skills" class="py-24 relative bg-[#090812]/50 border-t border-purple-500/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs font-mono tracking-widest text-purple-400 uppercase bg-purple-950/60 px-3.5 py-1.5 rounded-full border border-purple-500/30 inline-block mb-3" data-id="KOMPETENSI KREATIF" data-en="CORE CAPABILITIES">
+            KOMPETENSI KREATIF
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4" data-id="Keahlian & Perangkat Lunak" data-en="Skills & Creative Toolkit">
+            Keahlian & Perangkat Lunak
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed" data-id="Penguasaan instrumen desain profesional, manajemen media kreatif, dan integrasi teknologi modern." data-en="Mastery of professional design instruments, creative media direction, and modern technology integration.">
+            Penguasaan instrumen desain profesional, manajemen media kreatif, dan integrasi teknologi modern.
+          </p>
+        </div>
+
+        <!-- 5 Core Competencies Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          
+          <div class="glass-panel p-6 sm:p-7 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="font-bold text-white text-base">Graphic Design & Visual Branding</h3>
+                <span class="text-xs font-mono font-bold text-neon-purple bg-purple-950/70 px-2.5 py-1 rounded-full border border-purple-500/30">96%</span>
+              </div>
+              <div class="w-full h-1.5 bg-[#17142b] rounded-full overflow-hidden mb-4">
+                <div class="h-full bg-gradient-to-r from-purple-600 via-fuchsia-500 to-purple-400 rounded-full w-[96%]"></div>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4" data-id="Perancangan logo, panduan identitas merek, tipografi presisi, dan visual promosi siap cetak beresolusi tinggi." data-en="Logo crafting, brand guidelines, precise typography, and high-resolution print-ready collateral.">
+                Perancangan logo, panduan identitas merek, tipografi presisi, dan visual promosi siap cetak beresolusi tinggi.
+              </p>
+            </div>
+            <div class="space-y-1.5 pt-3 border-t border-purple-500/15 text-[11px] text-slate-300">
+              <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span><span>Brand Identity Systems</span></div>
+              <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span><span>Logo Design & Vector Art</span></div>
+              <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span><span>Print Prepress & Large Format</span></div>
+            </div>
+          </div>
+
+          <div class="glass-panel p-6 sm:p-7 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="font-bold text-white text-base">Creative Thinking & Art Direction</h3>
+                <span class="text-xs font-mono font-bold text-neon-purple bg-purple-950/70 px-2.5 py-1 rounded-full border border-purple-500/30">94%</span>
+              </div>
+              <div class="w-full h-1.5 bg-[#17142b] rounded-full overflow-hidden mb-4">
+                <div class="h-full bg-gradient-to-r from-purple-600 via-fuchsia-500 to-purple-400 rounded-full w-[94%]"></div>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4" data-id="Pengembangan konsep visual terpadu, moodboard strategis, visual storytelling, dan keselarasan gaya artistik proyek." data-en="Integrated visual conceptualization, strategic moodboarding, visual storytelling, and cross-media aesthetic alignment.">
+                Pengembangan konsep visual terpadu, moodboard strategis, visual storytelling, dan keselarasan gaya artistik proyek.
+              </p>
+            </div>
+            <div class="space-y-1.5 pt-3 border-t border-purple-500/15 text-[11px] text-slate-300">
+              <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span><span>Creative Strategy</span></div>
+              <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span><span>Visual Storytelling</span></div>
+              <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span><span>Brand Positioning</span></div>
+            </div>
+          </div>
+
+          <div class="glass-panel p-6 sm:p-7 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="font-bold text-white text-base">Content Creation & Social Media</h3>
+                <span class="text-xs font-mono font-bold text-neon-purple bg-purple-950/70 px-2.5 py-1 rounded-full border border-purple-500/30">92%</span>
+              </div>
+              <div class="w-full h-1.5 bg-[#17142b] rounded-full overflow-hidden mb-4">
+                <div class="h-full bg-gradient-to-r from-purple-600 via-fuchsia-500 to-purple-400 rounded-full w-[92%]"></div>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4" data-id="Penyusunan arsitektur konten media sosial, desain infografis interaktif, carousel edukasi, dan visual feed berkarakter." data-en="Social media content architecture, interactive infographics, educational carousels, and high-impact visual grids.">
+                Penyusunan arsitektur konten media sosial, desain infografis interaktif, carousel edukasi, dan visual feed berkarakter.
+              </p>
+            </div>
+            <div class="space-y-1.5 pt-3 border-t border-purple-500/15 text-[11px] text-slate-300">
+              <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span><span>Educational Carousels</span></div>
+              <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span><span>Feed Architecture</span></div>
+              <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span><span>Engagement Strategy</span></div>
+            </div>
+          </div>
+
+          <div class="glass-panel p-6 sm:p-7 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="font-bold text-white text-base">Multimedia Production</h3>
+                <span class="text-xs font-mono font-bold text-neon-purple bg-purple-950/70 px-2.5 py-1 rounded-full border border-purple-500/30">89%</span>
+              </div>
+              <div class="w-full h-1.5 bg-[#17142b] rounded-full overflow-hidden mb-4">
+                <div class="h-full bg-gradient-to-r from-purple-600 via-fuchsia-500 to-purple-400 rounded-full w-[89%]"></div>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4" data-id="Editing video sinematik, pembuatan motion graphic bumper, sinkronisasi audio-visual, dan live streaming support." data-en="Cinematic video editing, dynamic motion bumper creation, audio-visual synchronization, and live broadcasting support.">
+                Editing video sinematik, pembuatan motion graphic bumper, sinkronisasi audio-visual, dan live streaming support.
+              </p>
+            </div>
+            <div class="space-y-1.5 pt-3 border-t border-purple-500/15 text-[11px] text-slate-300">
+              <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span><span>Video Editing & Color Grading</span></div>
+              <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span><span>Motion Graphics & Bumpers</span></div>
+              <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span><span>Live Streaming OBS</span></div>
+            </div>
+          </div>
+
+          <div class="glass-panel p-6 sm:p-7 rounded-2xl flex flex-col justify-between md:col-span-2 lg:col-span-2">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="font-bold text-white text-base">Creative Project & Event Management</h3>
+                <span class="text-xs font-mono font-bold text-neon-purple bg-purple-950/70 px-2.5 py-1 rounded-full border border-purple-500/30">93%</span>
+              </div>
+              <div class="w-full h-1.5 bg-[#17142b] rounded-full overflow-hidden mb-4">
+                <div class="h-full bg-gradient-to-r from-purple-600 via-fuchsia-500 to-purple-400 rounded-full w-[93%]"></div>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4" data-id="Koordinasi tim media kreatif acara, tata kelola alur kerja panggung visual, dan manajemen tenggat waktu produksi." data-en="Directing creative media teams, stage visual operational workflows, and rigorous multimedia production pipelines.">
+                Koordinasi tim media kreatif acara, tata kelola alur kerja panggung visual, dan manajemen tenggat waktu produksi.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-3 border-t border-purple-500/15 text-[11px] text-slate-300">
+              <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span><span>Media Team Leadership</span></div>
+              <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span><span>Stage Visual Coordination</span></div>
+              <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span><span>Event Broadcasting Control</span></div>
+              <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span><span>Production Timelines</span></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Software Stack Grid -->
+        <div class="glass-panel p-8 rounded-3xl border-neon-glow">
+          <div class="text-center max-w-xl mx-auto mb-8">
+            <h3 class="text-xl font-bold text-white mb-1" data-id="Perangkat Lunak & Teknologi" data-en="Software & Production Tech Stack">
+              Perangkat Lunak & Teknologi
+            </h3>
+            <p class="text-xs text-slate-400" data-id="Software industri standar untuk produksi media visual, video editing, tata kelola web, dan otomasi." data-en="Industry-standard applications for creative media production, video editing, web, and automation.">
+              Software industri standar untuk produksi media visual, video editing, tata kelola web, dan otomasi.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+            <div class="p-4 rounded-xl bg-[#110f22] border border-purple-500/20 hover:border-purple-500/50 hover:bg-[#181432] transition-all flex flex-col items-center text-center group">
+              <div class="w-12 h-12 rounded-xl bg-purple-950/70 border border-purple-500/30 flex items-center justify-center font-bold font-mono text-purple-300 text-sm mb-3 group-hover:scale-110 transition-transform">PS</div>
+              <h4 class="text-xs font-bold text-white mb-0.5">Adobe Photoshop</h4>
+              <span class="text-[10px] text-purple-400 font-mono">Raster Design</span>
+              <span class="text-[10px] text-slate-400 mt-1">Expert</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-[#110f22] border border-purple-500/20 hover:border-purple-500/50 hover:bg-[#181432] transition-all flex flex-col items-center text-center group">
+              <div class="w-12 h-12 rounded-xl bg-purple-950/70 border border-purple-500/30 flex items-center justify-center font-bold font-mono text-purple-300 text-sm mb-3 group-hover:scale-110 transition-transform">AI</div>
+              <h4 class="text-xs font-bold text-white mb-0.5">Adobe Illustrator</h4>
+              <span class="text-[10px] text-purple-400 font-mono">Vector Design</span>
+              <span class="text-[10px] text-slate-400 mt-1">Expert</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-[#110f22] border border-purple-500/20 hover:border-purple-500/50 hover:bg-[#181432] transition-all flex flex-col items-center text-center group">
+              <div class="w-12 h-12 rounded-xl bg-purple-950/70 border border-purple-500/30 flex items-center justify-center font-bold font-mono text-purple-300 text-sm mb-3 group-hover:scale-110 transition-transform">PR</div>
+              <h4 class="text-xs font-bold text-white mb-0.5">Adobe Premiere</h4>
+              <span class="text-[10px] text-purple-400 font-mono">Video Editing</span>
+              <span class="text-[10px] text-slate-400 mt-1">Advanced</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-[#110f22] border border-purple-500/20 hover:border-purple-500/50 hover:bg-[#181432] transition-all flex flex-col items-center text-center group">
+              <div class="w-12 h-12 rounded-xl bg-purple-950/70 border border-purple-500/30 flex items-center justify-center font-bold font-mono text-purple-300 text-sm mb-3 group-hover:scale-110 transition-transform">AE</div>
+              <h4 class="text-xs font-bold text-white mb-0.5">After Effects</h4>
+              <span class="text-[10px] text-purple-400 font-mono">Motion Graphics</span>
+              <span class="text-[10px] text-slate-400 mt-1">Advanced</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-[#110f22] border border-purple-500/20 hover:border-purple-500/50 hover:bg-[#181432] transition-all flex flex-col items-center text-center group">
+              <div class="w-12 h-12 rounded-xl bg-purple-950/70 border border-purple-500/30 flex items-center justify-center font-bold font-mono text-purple-300 text-sm mb-3 group-hover:scale-110 transition-transform">FG</div>
+              <h4 class="text-xs font-bold text-white mb-0.5">Figma</h4>
+              <span class="text-[10px] text-purple-400 font-mono">UI/UX & Systems</span>
+              <span class="text-[10px] text-slate-400 mt-1">Advanced</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-[#110f22] border border-purple-500/20 hover:border-purple-500/50 hover:bg-[#181432] transition-all flex flex-col items-center text-center group">
+              <div class="w-12 h-12 rounded-xl bg-purple-950/70 border border-purple-500/30 flex items-center justify-center font-bold font-mono text-purple-300 text-sm mb-3 group-hover:scale-110 transition-transform">CD</div>
+              <h4 class="text-xs font-bold text-white mb-0.5">CorelDRAW</h4>
+              <span class="text-[10px] text-purple-400 font-mono">Print Prepress</span>
+              <span class="text-[10px] text-slate-400 mt-1">Expert</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-[#110f22] border border-purple-500/20 hover:border-purple-500/50 hover:bg-[#181432] transition-all flex flex-col items-center text-center group">
+              <div class="w-12 h-12 rounded-xl bg-purple-950/70 border border-purple-500/30 flex items-center justify-center font-bold font-mono text-purple-300 text-sm mb-3 group-hover:scale-110 transition-transform">WEB</div>
+              <h4 class="text-xs font-bold text-white mb-0.5">React & Tailwind</h4>
+              <span class="text-[10px] text-purple-400 font-mono">Web Architecture</span>
+              <span class="text-[10px] text-slate-400 mt-1">Intermediate</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-[#110f22] border border-purple-500/20 hover:border-purple-500/50 hover:bg-[#181432] transition-all flex flex-col items-center text-center group">
+              <div class="w-12 h-12 rounded-xl bg-purple-950/70 border border-purple-500/30 flex items-center justify-center font-bold font-mono text-purple-300 text-sm mb-3 group-hover:scale-110 transition-transform">WA</div>
+              <h4 class="text-xs font-bold text-white mb-0.5">WhatsApp Automation</h4>
+              <span class="text-[10px] text-purple-400 font-mono">Workflow Bot</span>
+              <span class="text-[10px] text-slate-400 mt-1">Advanced</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-[#110f22] border border-purple-500/20 hover:border-purple-500/50 hover:bg-[#181432] transition-all flex flex-col items-center text-center group">
+              <div class="w-12 h-12 rounded-xl bg-purple-950/70 border border-purple-500/30 flex items-center justify-center font-bold font-mono text-purple-300 text-sm mb-3 group-hover:scale-110 transition-transform">JS</div>
+              <h4 class="text-xs font-bold text-white mb-0.5">Node.js API</h4>
+              <span class="text-[10px] text-purple-400 font-mono">Backend Engine</span>
+              <span class="text-[10px] text-slate-400 mt-1">Intermediate</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-[#110f22] border border-purple-500/20 hover:border-purple-500/50 hover:bg-[#181432] transition-all flex flex-col items-center text-center group">
+              <div class="w-12 h-12 rounded-xl bg-purple-950/70 border border-purple-500/30 flex items-center justify-center font-bold font-mono text-purple-300 text-sm mb-3 group-hover:scale-110 transition-transform">OBS</div>
+              <h4 class="text-xs font-bold text-white mb-0.5">OBS Studio</h4>
+              <span class="text-[10px] text-purple-400 font-mono">Live Broadcast</span>
+              <span class="text-[10px] text-slate-400 mt-1">Advanced</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 7. KONTAK & FOOTER (Contact & Footer Section)                     -->
+    <!-- ================================================================= -->
+    <section id="contact" class="py-24 relative border-t border-purple-500/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs font-mono tracking-widest text-purple-400 uppercase bg-purple-950/60 px-3.5 py-1.5 rounded-full border border-purple-500/30 inline-block mb-3" data-id="HUBUNGI SAYA" data-en="GET IN TOUCH">
+            HUBUNGI SAYA
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4" data-id="Butuh Partner Kolaborasi atau Konsultasi Media Kreatif?" data-en="Need a Creative Media Partner or Consultation?">
+            Butuh Partner Kolaborasi atau Konsultasi Media Kreatif?
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed" data-id="Mari diskusikan kebutuhan branding, visual event, atau digitalisasi bisnis Anda bersama Muhammad Firdaus Haykal." data-en="Let us discuss your branding, media event direction, or digital operations with Muhammad Firdaus Haykal.">
+            Mari diskusikan kebutuhan branding, visual event, atau digitalisasi bisnis Anda bersama Muhammad Firdaus Haykal.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left Channels -->
+          <div class="lg:col-span-5 space-y-6">
+            
+            <!-- WhatsApp Direct Card -->
+            <a href="https://wa.me/6282230076610?text=Halo%20Muhammad%20Firdaus%20Haykal!%20Saya%20ingin%20berdiskusi%20mengenai%20kerja%20sama%20proyek%20kreatif." target="_blank" rel="noopener noreferrer" class="glass-panel-interactive p-6 rounded-2xl block border-neon-glow">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-emerald-950/70 border border-emerald-500/40 flex items-center justify-center text-emerald-400 flex-shrink-0">
+                  <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-xs font-mono text-emerald-400 tracking-wider uppercase font-semibold">WhatsApp Fast Response</span>
+                  <span class="text-lg font-bold text-white mt-0.5">+62 822-3007-6610</span>
+                  <span class="text-xs text-slate-300 mt-1 flex items-center gap-1">
+                    <span data-id="Chat Langsung via WhatsApp" data-en="Direct WhatsApp Chat">Chat Langsung via WhatsApp</span>
+                    <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Email Direct Card -->
+            <a href="mailto:namaguehaykal@gmail.com?subject=Inquiry%20Proyek%20Media%20Kreatif%20-%20Firdaus%20Media" class="glass-panel-interactive p-6 rounded-2xl block">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-purple-950/70 border border-purple-500/40 flex items-center justify-center text-purple-300 flex-shrink-0">
+                  <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-xs font-mono text-purple-400 tracking-wider uppercase font-semibold">Official Email</span>
+                  <span class="text-base sm:text-lg font-bold text-white mt-0.5 break-all">namaguehaykal@gmail.com</span>
+                  <span class="text-xs text-slate-300 mt-1 flex items-center gap-1">
+                    <span data-id="Kirimkan email proposal" data-en="Send email proposal">Kirimkan email proposal</span>
+                    <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Coverage Card -->
+            <div class="glass-panel p-6 rounded-2xl">
+              <div class="flex items-center gap-4 mb-3">
+                <div class="w-12 h-12 rounded-xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400">
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <span class="text-xs font-mono text-purple-400 uppercase tracking-wider">Operating Base</span>
+                  <h4 class="font-bold text-white text-base">Madiun & Yogyakarta, Indonesia</h4>
+                </div>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed" data-id="Siap melayani kolaborasi daring di seluruh Indonesia, serta pengarahan media event luring di wilayah Madiun, Yogyakarta, Solo, Surabaya, dan sekitarnya." data-en="Available for remote creative collaborations nationwide, as well as on-site media event direction in Madiun, Yogyakarta, Solo, Surabaya, and surrounding regions.">
+                Siap melayani kolaborasi daring di seluruh Indonesia, serta pengarahan media event luring di wilayah Madiun, Yogyakarta, Solo, Surabaya, dan sekitarnya.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Right Interactive Form -->
+          <div class="lg:col-span-7">
+            <div class="glass-panel p-8 sm:p-10 rounded-3xl border-neon-glow">
+              <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                <svg class="w-5 h-5 text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                <span data-id="Kirim Pesan Cepat" data-en="Send Fast Inquiry">Kirim Pesan Cepat</span>
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-400 mb-6" data-id="Tinggalkan rincian proyek Anda. Formulir ini terhubung langsung dengan backend server dan WhatsApp resmi." data-en="Leave your project requirements. Directly synced with our backend server and official WhatsApp channel.">
+                Tinggalkan rincian proyek Anda. Formulir ini terhubung langsung dengan backend server dan WhatsApp resmi.
+              </p>
+
+              <!-- Feedback Banner -->
+              <div id="contact-feedback" class="hidden p-4 rounded-xl mb-6 text-xs sm:text-sm"></div>
+
+              <form id="contact-form" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-mono text-purple-300 mb-1.5" data-id="NAMA LENGKAP *" data-en="YOUR NAME *">NAMA LENGKAP *</label>
+                    <input id="form-name" type="text" required placeholder="Nama Lengkap Anda" class="w-full px-4 py-3 rounded-xl bg-[#0f0e1d] border border-purple-500/25 text-white text-sm focus:border-purple-500 transition-all placeholder:text-slate-500">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-mono text-purple-300 mb-1.5" data-id="ALAMAT EMAIL *" data-en="EMAIL ADDRESS *">ALAMAT EMAIL *</label>
+                    <input id="form-email" type="email" required placeholder="alamat@email.com" class="w-full px-4 py-3 rounded-xl bg-[#0f0e1d] border border-purple-500/25 text-white text-sm focus:border-purple-500 transition-all placeholder:text-slate-500">
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-mono text-purple-300 mb-1.5" data-id="KATEGORI KEBUTUHAN PROYEK" data-en="PROJECT CATEGORY">KATEGORI KEBUTUHAN PROYEK</label>
+                  <select id="form-project-type" class="w-full px-4 py-3 rounded-xl bg-[#0f0e1d] border border-purple-500/25 text-white text-sm focus:border-purple-500 transition-all">
+                    <option value="Branding & Identitas Visual">Branding & Identitas Visual</option>
+                    <option value="Pengarahan Media Event & Visual Panggung">Pengarahan Media Event & Visual Panggung</option>
+                    <option value="Desain Grafis, Feed Medsos & Infografis">Desain Grafis, Feed Medsos & Infografis</option>
+                    <option value="Aplikasi Web & Otomasi WhatsApp">Aplikasi Web & Otomasi WhatsApp</option>
+                    <option value="Eskalasi Branding & Kemasan UMKM">Eskalasi Branding & Kemasan UMKM</option>
+                    <option value="Konsultasi Media Kreatif Umum">Konsultasi Media Kreatif Umum</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-mono text-purple-300 mb-1.5" data-id="PESAN ATAU PENJELASAN KEBUTUHAN *" data-en="PROJECT BRIEF / MESSAGE *">PESAN ATAU PENJELASAN KEBUTUHAN *</label>
+                  <textarea id="form-message" required rows="4" placeholder="Jelaskan ringkas rencana proyek atau pertanyaan Anda..." class="w-full px-4 py-3 rounded-xl bg-[#0f0e1d] border border-purple-500/25 text-white text-sm focus:border-purple-500 transition-all placeholder:text-slate-500"></textarea>
+                </div>
+
+                <button id="form-submit-btn" type="submit" class="w-full btn-neon-primary py-3.5 rounded-xl font-bold text-sm flex items-center justify-center gap-2 mt-2">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                  <span data-id="Kirimkan Pesan" data-en="Submit Message">Kirimkan Pesan</span>
+                </button>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-24 pt-12 border-t border-purple-500/20">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl monogram-badge flex items-center justify-center font-bold text-lg text-purple-300">
+                FH
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Muhammad Firdaus Haykal</h4>
+                <p class="text-xs text-purple-400 font-mono">Solopreneur & Creative Media Director</p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-6 text-xs text-slate-400">
+              <a href="#home" class="hover:text-purple-300 transition-colors" data-id="Beranda" data-en="Home">Beranda</a>
+              <a href="#about" class="hover:text-purple-300 transition-colors" data-id="Tentang" data-en="About">Tentang</a>
+              <a href="#experience" class="hover:text-purple-300 transition-colors" data-id="Pengalaman" data-en="Experience">Pengalaman</a>
+              <a href="#projects" class="hover:text-purple-300 transition-colors" data-id="Proyek" data-en="Projects">Proyek</a>
+              <a href="#skills" class="hover:text-purple-300 transition-colors" data-id="Keahlian" data-en="Skills">Keahlian</a>
+              <a href="#contact" class="hover:text-purple-300 transition-colors" data-id="Kontak" data-en="Contact">Kontak</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <a href="https://wa.me/6282230076610" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-[#141224] border border-purple-500/30 text-purple-300 flex items-center justify-center hover:bg-purple-600 hover:text-white transition-all" aria-label="WhatsApp">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </a>
+              <a href="mailto:namaguehaykal@gmail.com" class="w-9 h-9 rounded-lg bg-[#141224] border border-purple-500/30 text-purple-300 flex items-center justify-center hover:bg-purple-600 hover:text-white transition-all" aria-label="Email">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="text-center text-xs text-slate-500 pt-6 border-t border-white/5">
+            <p>© 2026 Muhammad Firdaus Haykal. All rights reserved. Firdaus Media Studio.</p>
+            <p class="text-[11px] text-purple-400/60 mt-1 font-mono">
+              Engineered with React & Tailwind CSS • Purple Neon Agency Edition
+            </p>
+          </div>
+        </footer>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- CASE STUDY MODAL DIALOG                                           -->
+    <!-- ================================================================= -->
+    <div id="project-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md">
+      <div class="glass-panel w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl border-neon-glow p-6 sm:p-10 relative bg-[#0e0c1a]" onclick="event.stopPropagation()">
+        
+        <button id="modal-close-btn" class="absolute top-6 right-6 p-2 rounded-full bg-[#1e1b33] text-purple-300 hover:text-white hover:bg-purple-600 transition-colors">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+
+        <div class="mb-6">
+          <span id="modal-badge" class="text-xs font-mono font-bold bg-purple-950/80 text-purple-300 px-3 py-1 rounded-full border border-purple-500/30">
+            Case Study
+          </span>
+          <h3 id="modal-title" class="text-2xl sm:text-3xl font-extrabold text-white mt-3 mb-2">
+            Judul Proyek
+          </h3>
+          <p id="modal-subtitle" class="text-xs sm:text-sm text-purple-300 font-mono">
+            Kategori • Muhammad Firdaus Haykal
+          </p>
+        </div>
+
+        <div class="space-y-6 text-sm text-slate-300 leading-relaxed">
+          <div class="p-4 rounded-xl bg-[#141226] border border-purple-500/20">
+            <h4 class="font-bold text-white text-sm mb-2 flex items-center gap-2">
+              <svg class="w-4 h-4 text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+              <span>Latar Belakang & Solusi Proyek</span>
+            </h4>
+            <p id="modal-desc" class="text-xs sm:text-sm leading-relaxed text-slate-200">
+              Deskripsi lengkap studi kasus.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-white text-sm mb-3">Pencapaian & Fitur Unggulan:</h4>
+            <div id="modal-highlights" class="space-y-2"></div>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-white text-sm mb-2">Perangkat Lunak & Teknologi:</h4>
+            <div id="modal-tools" class="flex flex-wrap gap-2"></div>
+          </div>
+
+          <div class="pt-6 border-t border-purple-500/20 flex flex-wrap items-center justify-between gap-4">
+            <a id="modal-inquire-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-neon-primary px-6 py-3 rounded-xl font-semibold text-xs flex items-center gap-2">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              <span>Diskusikan Proyek Serupa</span>
+            </a>
+            <button onclick="closeProjectModal()" class="px-5 py-3 rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-700 text-xs font-semibold">
+              Tutup
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Client-side Portfolio Data -->
+  <script src="data.js"></script>
+
+  <!-- Interactive Application Controller (Pure Native JavaScript - Zero Babel requirement!) -->
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "firdaus-haykal-portfolio",
+  "version": "1.0.0",
+  "description": "Portofolio pribadi full-stack berbasis React/Tailwind CSS Muhammad Firdaus Haykal - Dark Mode Elegan Purple Neon",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "react",
+    "tailwind",
+    "dark-mode",
+    "purple-neon",
+    "media-agency",
+    "graphic-designer"
+  ],
+  "author": "Muhammad Firdaus Haykal",
+  "license": "MIT"
+}

@@ -1,0 +1,514 @@
+{
+  "profile": {
+    "name": "Muhammad Firdaus Haykal",
+    "shortName": "FH | Muhammad Firdaus Haykal",
+    "initials": "FH",
+    "roles": {
+      "id": "Solopreneur / Graphic Designer / Media Event Director",
+      "en": "Solopreneur / Graphic Designer / Media Event Director"
+    },
+    "status": {
+      "id": "Terbuka untuk proyek & kolaborasi",
+      "en": "Available for projects & collaboration"
+    },
+    "agencyStatus": {
+      "id": "Live: Firdaus Media, Your Creative Media Partner",
+      "en": "Live: Firdaus Media, Your Creative Media Partner"
+    },
+    "location": {
+      "id": "Madiun - Yogyakarta, Indonesia",
+      "en": "Madiun - Yogyakarta, Indonesia"
+    },
+    "heroDescription": {
+      "id": "Saya membantu brand tampil lebih profesional melalui desain visual yang strategis, estetik, dan berkesan.",
+      "en": "I help brands stand out professionally through strategic, aesthetic, and impactful visual design."
+    },
+    "aboutParagraph": {
+      "id": "Seorang mahasiswa Ekonomi Islam dan desainer grafis yang berbasis di Indonesia dan memulai karier profesionalnya pada tahun 2023. Memiliki keminatan mendalam terhadap seni audio & visual sejak kecil, serta telah menguasai berbagai keterampilan di bidang media kreatif. Menikmati membuat gebrakan dan inovasi kreatif dalam setiap visual atau proyek yang saya tangani.",
+      "en": "An Islamic Economics student and graphic designer based in Indonesia who began his professional career in 2023. Harboring a profound passion for audio & visual arts since childhood, mastering diverse skills in creative media. Enjoys spearheading bold creative breakthroughs and innovations in every visual or project handled."
+    },
+    "stats": [
+      {
+        "id": "partners",
+        "value": "25+",
+        "label": {
+          "id": "Mitra Dipercaya",
+          "en": "Trusted Partners"
+        },
+        "sub": {
+          "id": "UMKM, Korporasi & Lembaga",
+          "en": "SMEs, Brands & Institutions"
+        }
+      },
+      {
+        "id": "productions",
+        "value": "400+",
+        "label": {
+          "id": "Produksi Kreatif Selesai",
+          "en": "Creative Productions Done"
+        },
+        "sub": {
+          "id": "Visual, Video & Media Campaign",
+          "en": "Visuals, Videos & Campaigns"
+        }
+      },
+      {
+        "id": "experience",
+        "value": "3+",
+        "label": {
+          "id": "Tahun Pengalaman",
+          "en": "Years Experience"
+        },
+        "sub": {
+          "id": "Sejak 2023 di Industri Kreatif",
+          "en": "Active in Media Industry"
+        }
+      },
+      {
+        "id": "events",
+        "value": "15+",
+        "label": {
+          "id": "Event Media Diarahkan",
+          "en": "Media Events Directed"
+        },
+        "sub": {
+          "id": "Konferensi, Festival & Pelatihan",
+          "en": "Conferences & Summits"
+        }
+      }
+    ],
+    "contact": {
+      "whatsapp": "+62 822-3007-6610",
+      "whatsappRaw": "6282230076610",
+      "email": "namaguehaykal@gmail.com",
+      "city": "Madiun & Yogyakarta, ID"
+    }
+  },
+  "interests": [
+    {
+      "id": "media-event",
+      "title": { "id": "Media Event", "en": "Media Event" },
+      "desc": {
+        "id": "Arahan kreatif visual panggung, live media broadcasting, dynamic display, dan publikasi event besar.",
+        "en": "Creative direction for stage visuals, live broadcasting, dynamic displays, and event media coverage."
+      },
+      "icon": "Video"
+    },
+    {
+      "id": "umkm-digital",
+      "title": { "id": "UMKM Digital", "en": "Digital SME Branding" },
+      "desc": {
+        "id": "Eskalasi identitas visual, kemasan premium, dan konten promosi untuk menaikkan kelas UMKM lokal.",
+        "en": "Scaling visual brand identity, packaging, and promo assets to elevate local businesses."
+      },
+      "icon": "Store"
+    },
+    {
+      "id": "ui-ux",
+      "title": { "id": "UI/UX", "en": "UI/UX Design" },
+      "desc": {
+        "id": "Perancangan antarmuka aplikasi digital yang intuitif, modern, dan berorientasi pada kemudahan pengguna.",
+        "en": "Crafting clean, intuitive, and conversion-focused user interfaces for web and mobile applications."
+      },
+      "icon": "Layout"
+    },
+    {
+      "id": "social-media",
+      "title": { "id": "Social Media Management", "en": "Social Media Management" },
+      "desc": {
+        "id": "Strategi konten visual komprehensif, desain carousel edukatif, dan kurasi engagement audiens.",
+        "en": "Comprehensive visual content strategy, informative carousels, and audience engagement curation."
+      },
+      "icon": "Share2"
+    },
+    {
+      "id": "digital-marketing",
+      "title": { "id": "Digital Marketing", "en": "Digital Marketing" },
+      "desc": {
+        "id": "Integrasi visual branding bernilai konversi tinggi yang terhubung dengan kanal pemasaran digital.",
+        "en": "High-conversion visual branding integrated with modern digital sales and acquisition channels."
+      },
+      "icon": "TrendingUp"
+    }
+  ],
+  "education": [
+    {
+      "institution": "STEI Hamfara, Yogyakarta",
+      "period": "2024 – Sekarang",
+      "major": {
+        "id": "S1 Ekonomi Syariah",
+        "en": "B.Sc Islamic Economics"
+      },
+      "highlights": [
+        {
+          "role": { "id": "Kepala Departemen Komunikasi & Informasi", "en": "Head of Communication & Information Dept." },
+          "org": "BEM Hamfara",
+          "desc": {
+            "id": "Memimpin tim media strategis, merancang arsitektur publikasi digital kampus, dan mengelola branding organisasi.",
+            "en": "Leading strategic media team, structuring campus digital publication architecture, and managing organizational branding."
+          }
+        },
+        {
+          "role": { "id": "Pemateri Pelatihan Desain Grafis", "en": "Graphic Design Masterclass Speaker" },
+          "org": "KSEI Relife",
+          "desc": {
+            "id": "Membimbing puluhan mahasiswa dalam fundamental desain visual, visual branding, dan teknik software grafis.",
+            "en": "Mentored dozens of students in graphic design principles, brand storytelling, and visual production techniques."
+          }
+        },
+        {
+          "role": { "id": "Ketua Divisi Media", "en": "Head of Media Division" },
+          "org": "B-MELT Hamfara 2025",
+          "desc": {
+            "id": "Mengarahkan seluruh aset grafis, video teaser, dan siaran langsung untuk event unggulan tahunan kampus.",
+            "en": "Directed all visual assets, promotional video teasers, and live event coverage for the major annual summit."
+          }
+        },
+        {
+          "role": { "id": "Ketua Divisi Media Kreatif", "en": "Head of Creative Media Division" },
+          "org": "GEO Hamfara 2025",
+          "desc": {
+            "id": "Merancang identitas panggung visual panggung, dokumentasi sinematik, dan kampanye digital multi-platform.",
+            "en": "Designed stage visual identity, cinematic documentation, and multi-channel digital campaigns."
+          }
+        }
+      ]
+    },
+    {
+      "institution": "SMK Negeri 2 Madiun",
+      "period": "2021 – 2024",
+      "major": {
+        "id": "Multimedia (Audio-Visual & Desain Komunikasi)",
+        "en": "Multimedia (Audio-Visual & Visual Communication)"
+      },
+      "highlights": [
+        {
+          "role": { "id": "Koordinator Media", "en": "Media Coordinator" },
+          "org": "OSIS SMKN 2 Madiun",
+          "desc": {
+            "id": "Mengkoordinir dokumentasi, visual feeds media sosial, dan materi promosi event kesiswaan.",
+            "en": "Coordinated school media documentation, social feeds, and promotional marketing for school events."
+          }
+        },
+        {
+          "role": { "id": "Ketua Redaksi", "en": "Editor-in-Chief" },
+          "org": "Majalah JAC (Jurnalistik SMKN 2 Madiun)",
+          "desc": {
+            "id": "Memimpin perancangan tata letak editorial, riset konten majalah berkala, dan penyelarasan visual cetak.",
+            "en": "Led editorial layout design, periodic content research, and final print production quality control."
+          }
+        },
+        {
+          "role": { "id": "Magang Desain & Percetakan", "en": "Design & Print Production Intern" },
+          "org": "Panglima Digital Printing Madiun",
+          "desc": {
+            "id": "Mengoperasikan alur kerja prepress, color matching, serta produksi outdoor & indoor large format banner.",
+            "en": "Handled prepress workflows, color calibration, and large-format outdoor & indoor digital printing."
+          }
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": { "id": "Direktur Kreatif", "en": "Creative Director" },
+      "company": "Vanguard Creative Media",
+      "period": "2024 – Sekarang",
+      "desc": {
+        "id": "Mengarahkan visi artistik, tata kelola proyek multimedia, serta strategi kampanye digital untuk berbagai brand rekanan.",
+        "en": "Directing artistic vision, multimedia project pipelines, and digital creative campaigns for diverse partner brands."
+      },
+      "tags": ["Creative Direction", "Brand Identity", "Event Media", "Video Production"]
+    },
+    {
+      "role": { "id": "Desainer Grafis Lepas", "en": "Freelance Graphic Designer" },
+      "company": "Firdaus Media",
+      "period": "2023 – Sekarang",
+      "desc": {
+        "id": "Menyediakan layanan komprehensif identitas merek, visual branding UMKM, materi promosi, serta konsultasi estetika media.",
+        "en": "Providing end-to-end brand identity services, SME marketing assets, promotional graphics, and media consultations."
+      },
+      "tags": ["Freelance", "Logo Design", "Packaging", "Print Media"]
+    },
+    {
+      "role": { "id": "Admin Media Sosial & Desainer", "en": "Social Media Lead & Visual Designer" },
+      "company": "ZISWAH Hamfara",
+      "period": "2024 – Sekarang",
+      "desc": {
+        "id": "Mengelola penyusunan konten edukasi zakat, infaq, shadaqah, dan wakaf melalui infografis kreatif dan visual persuasif.",
+        "en": "Managing Islamic philanthropic content strategy through educational infographics and engaging visual layouts."
+      },
+      "tags": ["Content Strategy", "Infographics", "Social Media", "Charity Campaign"]
+    },
+    {
+      "role": { "id": "Co-founder", "en": "Co-founder" },
+      "company": "Creativeln.Co Madiun",
+      "period": "2023 – 2024",
+      "desc": {
+        "id": "Menginisiasi agensi kreatif lokal Madiun yang berfokus pada digitalisasi visual UMKM dan pembuatan konten media sosial.",
+        "en": "Co-founded a regional creative agency focused on SME visual transformation and dynamic social media content."
+      },
+      "tags": ["Agency Growth", "Local SME", "Creative Agency", "Management"]
+    },
+    {
+      "role": { "id": "Magang Desain Grafis", "en": "Graphic Design Intern" },
+      "company": "Creative UX Jakarta",
+      "period": "2023",
+      "desc": {
+        "id": "Terlibat dalam proyek perancangan antarmuka digital, aset visual promosi aplikasi, dan pedoman gaya visual terstandar.",
+        "en": "Participated in user interface asset development, digital marketing banners, and standardized visual guidelines."
+      },
+      "tags": ["UI Design", "Digital Marketing", "Figma", "Design Systems"]
+    }
+  ],
+  "achievements": [
+    {
+      "title": {
+        "id": "Juara 1 Desain Poster Ekonomi Syariah Nasional",
+        "en": "1st Place National Islamic Economics Poster Design"
+      },
+      "issuer": "UIN Sunan Gunung Djati Bandung",
+      "year": "2025",
+      "desc": {
+        "id": "Meraih predikat juara pertama melalui karya visual poster ilmiah yang mengolaborasikan teori ekonomi syariah dengan infografis modern dan estetika tipografi kelas atas.",
+        "en": "Secured 1st place award with a scholarly poster harmonizing Islamic economics theory with modern data visualization and typography."
+      },
+      "badge": "Champion"
+    },
+    {
+      "title": {
+        "id": "Juara 1 Lomba Kompetensi Siswa (LKS) Desain Grafis",
+        "en": "1st Place Regional Student Competency Competition (LKS) Graphic Design"
+      },
+      "issuer": "Dinas Pendidikan Kota Madiun",
+      "year": "2023",
+      "desc": {
+        "id": "Juara 1 tingkat kota kategori Graphic Design Technology melalui uji kompetensi perancangan branding terintegrasi, layouting presisi, dan teknik prepress tingkat mahir.",
+        "en": "Won 1st prize in municipal Graphic Design Technology showcasing corporate branding design, high-precision editorial layout, and advanced prepress execution."
+      },
+      "badge": "Gold Medal"
+    }
+  ],
+  "projects": [
+    {
+      "id": "auto-workshop-app",
+      "category": "webapp",
+      "categoryName": { "id": "Web App & Otomasi", "en": "Web App & Automation" },
+      "featured": true,
+      "title": {
+        "id": "Aplikasi Manajemen Bengkel Mobil & Otomasi WhatsApp",
+        "en": "Auto Repair Workshop Management & WhatsApp Automation"
+      },
+      "shortDesc": {
+        "id": "Sistem komprehensif operasional bengkel mobil modern dengan integrasi otomasi notifikasi WhatsApp untuk update servis, estimasi biaya, dan reminder berkala.",
+        "en": "Comprehensive auto repair shop operational suite integrated with automated WhatsApp messaging for real-time service tracking, invoices, and maintenance reminders."
+      },
+      "fullDesc": {
+        "id": "Dibangun berdasarkan observasi mendalam dan pengalaman operasional lapangan bengkel otomotif. Sistem ini memecahkan inefisiensi pencatatan manual, riwayat servis yang tercecer, dan miskomunikasi status perbaikan dengan pelanggan. Dilengkapi modul otomasi WhatsApp bot yang secara instan mengirimkan status servis 'Masuk Antrean', 'Sedang Dikerjakan', 'Selesai & Siap Diambil', invoice digital otomatis, serta pengingat ganti oli berkala berbasis kilometer kendaraan.",
+        "en": "Engineered from hands-on field operational experience in automotive repair workshops. Solves disorganized manual paperwork, lost vehicle maintenance histories, and missed customer communications. Features an integrated WhatsApp automation engine that broadcasts real-time repair milestones ('Queued', 'In-Progress', 'Completed'), digital billing, and predictive periodic maintenance reminders based on mileage."
+      },
+      "highlights": [
+        { "id": "Otomasi WhatsApp Status Servis Real-time", "en": "Real-time WhatsApp Service Status Alerts" },
+        { "id": "Manajemen Riwayat Kendaraan & Pelanggan Terpusat", "en": "Centralized Vehicle & Customer History Database" },
+        { "id": "Pembuatan Invoice Digital & Rincian Sparepart Otomatis", "en": "Automated Digital Invoicing & Spare Parts Breakdown" },
+        { "id": "Sistem Pengingat Ganti Oli & Servis Berkala", "en": "Predictive Periodic Maintenance & Oil Reminder" },
+        { "id": "Dashboard Finansial & Omset Harian/Bulanan", "en": "Financial Analytics & Daily Revenue Dashboard" }
+      ],
+      "tools": ["React", "Tailwind CSS", "Node.js", "WhatsApp Gateway", "REST API", "Database"],
+      "metrics": {
+        "metric1": "85% Penghematan Waktu Rekap",
+        "metric2": "99% Notifikasi Terkirim Cepat"
+      },
+      "accentColor": "from-purple-600 to-indigo-600"
+    },
+    {
+      "id": "vanguard-firdaus-branding",
+      "category": "branding",
+      "categoryName": { "id": "Branding & Identitas", "en": "Branding & Identity" },
+      "featured": true,
+      "title": {
+        "id": "Brand Identity: Vanguard Creative & Firdaus Media",
+        "en": "Brand Identity: Vanguard Creative & Firdaus Media"
+      },
+      "shortDesc": {
+        "id": "Arsitektur identitas visual lengkap agensi media kreatif, logo system neon-cyberpunk, panduan warna korporat, dan media kit komersial.",
+        "en": "Comprehensive visual identity architecture, cyber-aesthetic logo system, corporate brand guidelines, and commercial media kits."
+      },
+      "fullDesc": {
+        "id": "Perancangan identitas visual mandiri untuk Firdaus Media dan Vanguard Creative. Konsep memadukan modernitas agency kreatif dengan sentuhan Purple Neon yang merefleksikan inovasi tanpa batas, presisi tinggi, dan kepercayaan profesional mitra bisnis.",
+        "en": "Full visual identity design for Firdaus Media and Vanguard Creative. The concept harmonizes contemporary creative studio aesthetics with high-vibe Purple Neon accents, reflecting relentless innovation, top precision, and executive trust."
+      },
+      "highlights": [
+        { "id": "Pedoman Identitas Merek (Brand Guideline Book)", "en": "Comprehensive Brand Identity Guidelines" },
+        { "id": "Desain Aset Stationery, ID Card & Proposal Kit", "en": "Stationery, Badge & Commercial Proposal Kits" },
+        { "id": "Template Visual Media Sosial Multi-format", "en": "Multi-format Social Media Grid System" }
+      ],
+      "tools": ["Adobe Illustrator", "Photoshop", "Figma", "Typography System"],
+      "accentColor": "from-purple-500 to-pink-600"
+    },
+    {
+      "id": "ziswah-campaign",
+      "category": "graphic",
+      "categoryName": { "id": "Desain Grafis & Medsos", "en": "Graphic Design & Social" },
+      "featured": true,
+      "title": {
+        "id": "Kampanye Visual & Infografis Edukasi ZISWAH Hamfara",
+        "en": "ZISWAH Hamfara Educational Visual Campaign & Infographics"
+      },
+      "shortDesc": {
+        "id": "Rangkaian visual feeds Instagram, carousel edukasi literasi zakat modern, dan poster digital kampanye filantropi Islam.",
+        "en": "Series of Instagram carousel infographics, Islamic philanthropy educational campaigns, and conversion-driven donation posters."
+      },
+      "fullDesc": {
+        "id": "Mengembangkan strategi konten visual yang mentransformasikan materi literasi keuangan Islam yang kompleks menjadi sajian visual infografis yang renyah, modern, dan mudah dipahami oleh generasi muda serta donatur potensial.",
+        "en": "Engineered an educational visual content system that demystifies complex Islamic finance topics into crisp, digestible, modern infographics for youth and prospective donors."
+      },
+      "highlights": [
+        { "id": "Desain 50+ Carousel Edukasi Finansial Islam", "en": "Crafted 50+ Islamic Financial Carousels" },
+        { "id": "Peningkatan 140% Interaksi & Share Akun", "en": "140% Increase in Profile Reach & Saves" },
+        { "id": "Penyelarasan Desain Visual Lintas Kanal", "en": "Harmonized Cross-channel Design Cohesion" }
+      ],
+      "tools": ["Adobe Photoshop", "Illustrator", "Content Strategy", "Canva Pro"],
+      "accentColor": "from-indigo-500 to-purple-600"
+    },
+    {
+      "id": "jac-magazine-bmelt-geo",
+      "category": "event",
+      "categoryName": { "id": "Media Event & Editorial", "en": "Media Event & Editorial" },
+      "featured": true,
+      "title": {
+        "id": "Media Direction B-MELT, GEO Hamfara 2025 & Majalah JAC",
+        "en": "Media Direction B-MELT, GEO Hamfara 2025 & JAC Magazine"
+      },
+      "shortDesc": {
+        "id": "Pengarahan visual panggung LED, video bumper dinamis, publikasi cetak majalah JAC, dan visual broadcasting konferensi besar.",
+        "en": "LED stage visual direction, motion bumpers, JAC print magazine editorial curation, and live conference broadcasting."
+      },
+      "fullDesc": {
+        "id": "Sebagai Ketua Divisi Media B-MELT dan GEO Hamfara 2025, serta mantan Pemimpin Redaksi Majalah JAC SMKN 2 Madiun, proyek ini merangkum kapabilitas eksekusi media skala besar dari layar cetak editorial hingga layar panggung LED megah.",
+        "en": "Serving as Head of Media for B-MELT & GEO Hamfara 2025 and former Editor-in-Chief of JAC Magazine, this project encapsulates large-scale multimedia execution from print editorial layouts to stadium-scale LED stage graphics."
+      },
+      "highlights": [
+        { "id": "Motion Graphic Bumper & Visual Backdrop LED Panggung", "en": "Dynamic LED Stage Visual Backdrops & Motion Bumpers" },
+        { "id": "Kurasi Editorial Layout Majalah JAC SMKN 2 Madiun", "en": "Editorial Layout Direction for JAC Magazine SMKN 2 Madiun" },
+        { "id": "Live Broadcast & Visual Social Media Coverage", "en": "Live Multi-cam Broadcast & Social Media Coverage" }
+      ],
+      "tools": ["Premiere Pro", "After Effects", "InDesign", "Photoshop", "OBS Studio"],
+      "accentColor": "from-purple-600 to-fuchsia-600"
+    },
+    {
+      "id": "uin-poster-award",
+      "category": "graphic",
+      "categoryName": { "id": "Desain Grafis & Prestasi", "en": "Graphic Design & Awards" },
+      "featured": false,
+      "title": {
+        "id": "Poster Juara 1 Nasional Ekonomi Syariah UIN Bandung",
+        "en": "1st Prize National Islamic Economics Poster Design - UIN Bandung"
+      },
+      "shortDesc": {
+        "id": "Poster karya pemenang Juara 1 tingkat nasional yang mengintegrasikan teori ekonomi syariah dengan visual storytelling modern.",
+        "en": "National 1st prize winning design poster harmonizing Islamic economics theory with modern visual storytelling and infographics."
+      },
+      "fullDesc": {
+        "id": "Karya pemenang Juara 1 di UIN Sunan Gunung Djati Bandung tahun 2025. Memadukan konsep kesejahteraan ekonomi berbasis syariah dengan komposisi visual keemasan, hierarki teks yang presisi, dan visualisasi data yang memukau dewan juri.",
+        "en": "1st place winning masterpiece at UIN Bandung in 2025. Harmonizes Islamic welfare concepts with golden-ratio visual composition, rigorous hierarchy, and compelling graphic data representation."
+      },
+      "highlights": [
+        { "id": "Penghargaan Juara 1 Tingkat Nasional", "en": "1st Place National Championship Winner" },
+        { "id": "Riset Visual & Sintesis Data Ekonomi", "en": "In-depth Visual Research & Data Synthesis" },
+        { "id": "Sentuhan Tipografi & Harmoni Warna Presisi", "en": "Flawless Typography & Color Harmony" }
+      ],
+      "tools": ["Adobe Photoshop", "Adobe Illustrator", "Editorial Design"],
+      "accentColor": "from-amber-500 to-purple-600"
+    },
+    {
+      "id": "umkm-packaging-revamp",
+      "category": "branding",
+      "categoryName": { "id": "Branding & UMKM", "en": "Branding & Local SME" },
+      "featured": false,
+      "title": {
+        "id": "Revamp Kemasan & Identitas Visual UMKM Digital",
+        "en": "Local SME Packaging & Visual Identity Revamp"
+      },
+      "shortDesc": {
+        "id": "Transformasi kemasan produk kuliner dan ritel UMKM Madiun - Yogyakarta untuk bersaing di pasar modern dan marketplace.",
+        "en": "Packaging revamp and retail brand transformation for food and handicraft SMEs in Madiun - Yogyakarta for modern retail."
+      },
+      "fullDesc": {
+        "id": "Membantu para pemilik usaha UMKM mentransformasikan tampilan produk mereka dari kemasan standar menjadi kemasan premium bernilai jual tinggi, lengkap dengan sertifikasi visual label dan materi promosi digital.",
+        "en": "Assisted local small business owners in revamping generic packaging into standout retail-shelf packages, equipped with compliant nutrition tables and digital marketing launch kits."
+      },
+      "highlights": [
+        { "id": "Desain Standing Pouch & Label Kemasan Siap Cetak", "en": "Print-Ready Standing Pouch & Label Packaging" },
+        { "id": "Katalog Menu & Banner Promosi Marketplace", "en": "Menu Catalog & Online Marketplace Promo Banners" },
+        { "id": "Peningkatan Valuasi Visual Produk di Mata Konsumen", "en": "Elevated Brand Perception & Consumer Trust" }
+      ],
+      "tools": ["Adobe Illustrator", "Prepress Prep", "CorelDRAW", "Photoshop 3D Mockup"],
+      "accentColor": "from-purple-500 to-indigo-600"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Graphic Design & Visual Branding",
+      "categoryEn": "Graphic Design & Visual Branding",
+      "level": 96,
+      "desc": {
+        "id": "Perancangan logo, panduan identitas merek, tipografi presisi, dan visual promosi siap cetak beresolusi tinggi.",
+        "en": "Logo crafting, brand guidelines, precise typography, and high-resolution print-ready promotional collateral."
+      },
+      "items": ["Brand Identity Systems", "Logo Design", "Editorial & Magazine Layout", "Vector Art & Illustration", "Print Prepress & Large Format"]
+    },
+    {
+      "category": "Creative Thinking & Art Direction",
+      "categoryEn": "Creative Thinking & Art Direction",
+      "level": 94,
+      "desc": {
+        "id": "Pengembangan konsep visual terpadu, moodboard strategis, visual storytelling, dan keselarasan gaya artistik proyek.",
+        "en": "Integrated visual conceptualization, strategic moodboarding, visual storytelling, and cross-media aesthetic alignment."
+      },
+      "items": ["Creative Strategy", "Visual Storytelling", "Brand Positioning", "Campaign Direction", "Color Psychology"]
+    },
+    {
+      "category": "Content Creation & Social Media",
+      "categoryEn": "Content Creation & Social Media",
+      "level": 92,
+      "desc": {
+        "id": "Penyusunan arsitektur konten media sosial, desain infografis interaktif, carousel edukasi, dan visual feed berkarakter.",
+        "en": "Social media content architecture, interactive infographics, educational carousels, and high-impact visual grids."
+      },
+      "items": ["Educational Carousels", "Social Media Feed Architecture", "Infographic Design", "Content Scheduling Strategy", "Engagement Curation"]
+    },
+    {
+      "category": "Multimedia Production",
+      "categoryEn": "Multimedia Production",
+      "level": 89,
+      "desc": {
+        "id": "Editing video sinematik, pembuatan motion graphic bumper, sinkronisasi audio-visual, dan live streaming support.",
+        "en": "Cinematic video editing, dynamic motion bumper creation, audio-visual synchronization, and live broadcasting support."
+      },
+      "items": ["Video Editing", "Motion Graphics", "Audio-Visual Synchronization", "LED Stage Backdrop Visuals", "Live OBS Streaming"]
+    },
+    {
+      "category": "Creative Project & Event Management",
+      "categoryEn": "Creative Project & Event Management",
+      "level": 93,
+      "desc": {
+        "id": "Koordinasi tim media kreatif acara, tata kelola alur kerja panggung visual, dan manajemen tenggat waktu produksi.",
+        "en": "Directing creative media teams, stage visual operational workflows, and rigorous multimedia production pipelines."
+      },
+      "items": ["Media Team Leadership", "Stage Visual Coordination", "Event Broadcasting Control", "Production Timelines", "Client & Stakeholder Alignment"]
+    }
+  ],
+  "toolsList": [
+    { "name": "Adobe Photoshop", "icon": "SiPhotoshop", "category": "Design" },
+    { "name": "Adobe Illustrator", "icon": "SiAdobeillustrator", "category": "Vector" },
+    { "name": "Adobe Premiere Pro", "icon": "SiAdobepremierepro", "category": "Video" },
+    { "name": "Adobe After Effects", "icon": "SiAdobeaftereffects", "category": "Motion" },
+    { "name": "Figma", "icon": "SiFigma", "category": "UI/UX" },
+    { "name": "CorelDRAW", "icon": "Palette", "category": "Prepress" },
+    { "name": "React.js", "icon": "SiReact", "category": "Frontend" },
+    { "name": "Tailwind CSS", "icon": "SiTailwindcss", "category": "Styling" },
+    { "name": "WhatsApp Automation", "icon": "MessageSquare", "category": "Workflow" },
+    { "name": "Node.js", "icon": "SiNodedotjs", "category": "Backend" }
+  ]
+}
